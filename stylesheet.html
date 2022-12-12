@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylesheet</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="fw-700 mb-4">Background Color</h2>
+        <div class="row mb-5">
+            <div class="col-md-3">
+                <div class="box mb-4 bg-black text-white">
+                    .bg-black
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box mb-4 bg-dark text-white">
+                    .bg-dark
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box mb-4 bg-white">
+                    .bg-white
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box mb-4 bg-primary text-white">
+                    .bg-primary
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box mb-4 bg-danger text-white">
+                    .bg-danger
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box mb-4 bg-warning">
+                    .bg-warning
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box bg-secondary text-white">
+                    .bg-secondary
+                </div>
+            </div>
+        </div>
+        <h2 class="fw-700 mb-4">Typography</h2>
+        <div class="row mb-5">
+            <div class="col-6">
+                <h4 class="fw-700">Font Weight</h4>
+                <p class="fw-400">.fw-400</p>
+                <p class="fw-500">.fw-500</p>
+                <p class="fw-600">.fw-600</p>
+                <p class="fw-700">.fw-700</p>
+            </div>
+            <div class="col-6">
+                <h4 class="fw-700">Font Color</h4>
+                <p class="text-black">.text-black</p>
+                <p class="text-dark">.text-dark</p>
+                <p class="text-white bg-dark">.text-white</p>
+                <p class="text-danger">.text-danger</p>
+                <p class="text-secondary">.text-secondary</p>
+                <p class="text-warning">.text-warning</p>
+                <p class="text-primary">.text-primary</p>
+            </div>
+        </div>
+        <h2 class="fw-700 mb-4">Badge</h2>
+        <div class="d-flex flex-wrap mb-5">
+            <div class="badge badge-success mb-3">badge badge-success</div>
+            <div class="badge badge-danger mb-3 mx-3">badge badge-danger</div>
+            <div class="badge badge-warning mb-3">badge badge-warning</div>
+        </div>
+        <h2 class="fw-700 mb-4">Button</h2>
+        <div class="d-flex flex-wrap mb-5">
+            <button class="btn btn-danger mb-3">btn btn-danger</button>
+            <button class="btn btn-success mb-3 mx-3">btn btn-success</button>
+            <button class="btn btn-primary mb-3">btn btn-primary</button>
+        </div>
+        <h2 class="fw-700 mb-4">Form</h2>
+        <div class="row mb-5">
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <label for="test-input" class="form-label">Label Input</label>
+                    <input type="text" id="test-input" class="form-control" placeholder="Testing placeholder">
+                </div>
+                <div class="mb-3">
+                    <label for="test-input" class="form-label">Label</label>
+                    <input type="text" id="test-input" class="form-control" placeholder="Testing placeholder" value="Testing value">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <label for="test-select" class="form-label">Label Select</label>
+                    <select id="test-select" class="form-select">
+                        <option value="" class="d-none" selected>Pilih Opsi</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="test-select" class="form-label">Label Select</label>
+                    <select id="test-select" class="form-select">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="mb-3">
+                    <label for="test-textarea" class="form-label">Label Textarea</label>
+                    <textarea id="test-textarea" class="form-control" cols="30" rows="5" placeholder="Testing placeholder"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

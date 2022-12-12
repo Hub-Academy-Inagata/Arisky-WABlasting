@@ -1,0 +1,137 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+/* font weight */
+.fw-400{
+    font-weight: 400 !important;
+}
+.fw-500{
+    font-weight: 500 !important;
+}
+.fw-600{
+    font-weight: 600 !important;
+}
+.fw-700{
+    font-weight: 700 !important;
+}
+
+/* text color */
+.text-black{
+    color: #000000 !important;
+}
+.text-dark{
+    color: #212122 !important;
+}
+.text-white{
+    color: #ffffff !important;
+}
+.text-danger{
+    color: #CF312D !important;
+}
+.text-secondary{
+    color: #55595C !important;
+}
+.text-warning{
+    color: #F39649 !important;
+}
+.text-primary{
+    color: #A22623 !important;
+}
+
+/* background color */
+.bg-black{
+    background-color: #000000 !important;
+}
+.bg-dark{
+    background-color: #212122 !important;
+}
+.bg-white{
+    background-color: #ffffff !important;
+}
+.bg-danger{
+    background-color: #CF312D !important;
+}
+.bg-secondary{
+    background-color: #55595C !important;
+}
+.bg-warning{
+    background-color: #F39649 !important;
+}
+.bg-primary{
+    background-color: #A22623 !important;
+}
+
+/* badge */
+.badge{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px;
+    border-radius: 8px;
+}
+.badge-success{
+    color: #5CB85C !important;
+    border: 1px solid #F5F7FA !important;
+    background: #EDF7ED !important;
+}
+.badge-danger{
+    color: #EC3832 !important;
+    border: 1px solid #F5F7FA !important;
+    background: #F7EDED !important;
+}
+.badge-warning{
+    color: #F39649 !important;
+    border: 1px solid #F5F7FA !important;
+    background: #FDF1E7 !important;
+}
+
+/* button */
+.btn{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px;
+    border-radius: 4px;
+}
+.btn-danger{
+    border-color: #E43631 !important;
+    background: #E43631 !important;
+}
+.btn-success{
+    border-color: #5CB85C !important;
+    background: #5CB85C !important;
+}
+.btn-primary{
+    border-color: #A22623 !important;
+    background: #A22623 !important;
+}
+
+/* form */
+.form-label{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+.form-control, .form-select{
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    padding: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+.form-control::placeholder{
+    color: #CDD0D3;
+}
+
+/* additional CSS */
+.box{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
