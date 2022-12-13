@@ -61,6 +61,9 @@
 .bg-primary{
     background-color: #A22623 !important;
 }
+.bg-transparent{
+    background-color: transparent !important;
+}
 
 /* badge */
 .badge{
@@ -97,14 +100,17 @@
 .btn-danger{
     border-color: #E43631 !important;
     background: #E43631 !important;
+    color: #ffffff !important;
 }
 .btn-success{
     border-color: #5CB85C !important;
     background: #5CB85C !important;
+    color: #ffffff !important;
 }
 .btn-primary{
     border-color: #A22623 !important;
     background: #A22623 !important;
+    color: #ffffff !important;
 }
 
 /* form */
