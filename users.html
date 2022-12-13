@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>ABCenter</title>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./vendor/coreui/assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- ./vendor/coreui/vendors styles-->
+    <link rel="stylesheet" href="./vendor/coreui/vendors/simplebar/css/simplebar.css">
+    <link rel="stylesheet" href="./vendor/coreui/css/vendors/simplebar.css">
+
+    <!-- Main styles for this application-->
+    <link href="./vendor/coreui/css/style.css" rel="stylesheet">
+
+    <!-- Custom CSS-->
+    <link href="./css/stylesheet.css" rel="stylesheet">
+    <link href="./css/layout/sidebar.css" rel="stylesheet">
+    <link href="./css/layout/body.css" rel="stylesheet">
+    <link href="./css/layout/footer.css" rel="stylesheet">
+    <link href="./css/components/form.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pages/users.css">
+  </head>
+  <body>
+    <div class="sidebar sidebar-dark bg-primary sidebar-fixed" id="sidebar">
+      <div class="sidebar-brand bg-primary d-flex d-md-flex">
+        <img src="./image/logo.svg" class="sidebar-brand bg-primary d-flex d-md-flex" alt="">
+        <!-- <svg class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
+          <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#full"></use>
+        </svg> -->
+        <img src="./image/logo.svg" class="sidebar-brand-narrow bg-primary" alt="">
+        <!-- <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
+          <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#signet"></use>
+        </svg> -->
+      </div>
+      <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+        <li class="nav-item"><a class="nav-link" href="index.html">
+            <svg class="nav-icon">
+              <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-home"></use>
+            </svg> Beranda</a></li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+                <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-people"></use>
+            </svg> Anggota</a>
+            <ul class="nav-group-items">
+                <li class="nav-item"><a class="nav-link" href="users.html"><span class="nav-icon"></span> Master Level</a></li>
+                <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Import Data</a></li>
+                <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span> Export Data</a></li>
+                <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span> Program</a></li>
+            </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="colors.html">
+            <svg class="nav-icon">
+              <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
+            </svg> Monitoring</a></li>
+      </ul>
+    </div>
+    <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+      <header class="header header-sticky bg-transparent border-0 pt-4 px-3 mb-4">
+        <div class="container-fluid flex-column align-items-start">
+          <button class="header-toggler p-0 d-lg-none mb-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+            <svg class="icon icon-lg">
+              <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+            </svg>
+          </button>
+            <h4 class="fw-600 mb-0">Data Anggota</h4>
+        </div>
+      </header>
+      <div class="body flex-grow-1 px-3">
+        <div class="container-lg">
+            <div class="d-flex form-search mb-4">
+                <input type="text" id="search" class="form-control" placeholder="Cari Muhaimin Slamet">
+                <button class="btn btn-danger btn-tambah">
+                    <a href="#">
+                        <svg class="icon">
+                            <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-plus"></use>
+                        </svg> Tambah
+                    </a>
+                </button>
+            </div>
+            <div class="card card-main">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th class="text-secondary fw-600" scope="col">No</th>
+                            <th class="text-secondary fw-600" scope="col">Nama Anggota</th>
+                            <th class="text-secondary fw-600" scope="col">No. Telp</th>
+                            <th class="text-secondary fw-600" scope="col">Alamat</th>
+                            <th class="text-secondary fw-600" scope="col">Status</th>
+                            <th class="text-secondary fw-600" scope="col">Aksi</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Jakob Ekstrom Bothman</td>
+                            <td>089217827382</td>
+                            <td>2972 Westheimer Rd. Santa Ana, Illinois 85486 </td>
+                            <td><button class="btn btn-light btn-aktif" type="button"><p class="text-aktif">Aktif</p></button></td>
+                            <!-- <td>
+                                <button class="btn btn-outline-danger" type="button">
+                                    <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chevron-bottom"></use>
+                                    </svg>Lihat Detail
+                                </button>
+                            </td> -->
+                            <td><button class="btn btn-outline-danger btn-detail" type="button"><p class="text-detail">Lihat Detail</p></button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Zain Stanton</td>
+                            <td>089217827382</td>
+                            <td>2972 Westheimer Rd. Santa Ana, Illinois 85486 </td>
+                            <td><button class="btn btn-light btn-aktif" type="button"><p class="text-aktif">Aktif</p></button></td>
+                            <td><button class="btn btn-outline-danger btn-detail" type="button"><p class="text-detail">Lihat Detail</p></button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Jaylon Gouse</td>
+                            <td>089217827382</td>
+                            <td>2715 Ash Dr. San Jose, South Dakota 83475</td>
+                            <td><button class="btn btn-light btn-aktif" type="button"><p class="text-aktif">Aktif</p></button></td>
+                            <td><button class="btn btn-outline-danger btn-detail" type="button"><p class="text-detail">Lihat Detail</p></button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Justin Aminoff</td>
+                            <td>089217827382</td>
+                            <td>2118 Thornridge Cir. Syracuse, Connecticut 35624</td>
+                            <td><button class="btn btn-light btn-aktif" type="button"><p class="text-aktif">Aktif</p></button></td>
+                            <td><button class="btn btn-outline-danger btn-detail" type="button"><p class="text-detail">Lihat Detail</p></button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Giana Aminoff</td>
+                            <td>089217827382</td>
+                            <td>3891 Ranchview Dr. Richardson, California 62639</td>
+                            <td><button class="btn btn-light btn-aktif" type="button"><p class="text-aktif">Aktif</p></button></td>
+                            <td><button class="btn btn-outline-danger btn-detail" type="button"><p class="text-detail">Lihat Detail</p></button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Jaylon Workman</td>
+                            <td>089217827382</td>
+                            <td>3891 Ranchview Dr. Richardson, California 62639</td>
+                            <td><button class="btn btn-light btn-aktif" type="button"><p class="text-aktif">Aktif</p></button></td>
+                            <td><button class="btn btn-outline-danger btn-detail" type="button"><p class="text-detail">Lihat Detail</p></button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>Lydia Donin</td>
+                            <td>089217827382</td>
+                            <td>3517 W. Gray St. Utica, Pennsylvania 57867</td>
+                            <td><button class="btn btn-light btn-aktif" type="button"><p class="text-aktif">Aktif</p></button></td>
+                            <td><button class="btn btn-outline-danger btn-detail" type="button"><p class="text-detail">Lihat Detail</p></button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>Anika George</td>
+                            <td>089217827382</td>
+                            <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                            <td><button class="btn btn-light btn-aktif" type="button"><p class="text-aktif">Aktif</p></button></td>
+                            <td><button class="btn btn-outline-danger btn-detail" type="button"><p class="text-detail">Lihat Detail</p></button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>Makenna Schleifer</td>
+                            <td>089217827382</td>
+                            <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                            <td><button class="btn btn-light text-danger btn-nonaktif" type="button"><p class="text-nonaktif">Tidak Aktif</p></button></td>
+                            <td><button class="btn btn-outline-danger btn-detail" type="button"><p class="text-detail">Lihat Detail</p></button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>Mira Donin</td>
+                            <td>089217827382</td>
+                            <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                            <td><button class="btn btn-light text-danger btn-nonaktif" type="button"><p class="text-nonaktif">Tidak Aktif</p></button></td>
+                            <td><button class="btn btn-outline-danger btn-detail" type="button"><p class="text-detail">Lihat Detail</p></button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+      </div>
+      <footer class="footer bg-transparent border-0">
+        <div>Made with ❤️ <span class="text-danger">ChatBlaster</span></div>
+      </footer>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="./vendor/coreui/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <script src="./vendor/coreui/vendors/simplebar/js/simplebar.min.js"></script>
+    <script>
+    </script>
+
+  </body>
+</html>
