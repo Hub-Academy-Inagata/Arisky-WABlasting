@@ -137,6 +137,17 @@
 .form-control::placeholder{
     color: #CDD0D3;
 }
+html:not([dir=rtl]) .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback){
+    border-left: none;
+}
+.input-group-text{
+    background-color: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+}
+html:not([dir=rtl]) .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating), html:not([dir=rtl]) .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), html:not([dir=rtl]) .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control, html:not([dir=rtl]) .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select{
+    border-right: none;
+}
 
 /* additional CSS */
 .box{
