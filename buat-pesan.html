@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>ABCenter</title>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./vendor/coreui/assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- ./vendor/coreui/vendors styles-->
+    <link rel="stylesheet" href="./vendor/coreui/vendors/simplebar/css/simplebar.css">
+    <link rel="stylesheet" href="./vendor/coreui/css/vendors/simplebar.css">
+
+    <!-- Main styles for this application-->
+    <link href="./vendor/coreui/css/style.css" rel="stylesheet">
+
+    <!-- Custom CSS-->
+    <!-- Stylesheet -->
+    <link href="./css/stylesheet.css" rel="stylesheet">
+    <!-- CSS Base -->
+    <link href="./css/base/typography.css" rel="stylesheet">
+    <!-- CSS Component -->
+    <link href="./css/components/form.css" rel="stylesheet">
+    <link href="./css/components/table.css" rel="stylesheet">
+    <!-- CSS Layout -->
+    <link href="./css/layout/header.css" rel="stylesheet">
+    <link href="./css/layout/sidebar.css" rel="stylesheet">
+    <link href="./css/layout/body.css" rel="stylesheet">
+    <link href="./css/layout/footer.css" rel="stylesheet">
+    <!-- CSS Pages -->
+    <link href="./css/pages/dashboard.css" rel="stylesheet">
+
+    <!-- Vanilla Datepicker CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css'>
+
+
+</head>
+
+<body>
+    <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
+        <div class="sidebar-brand d-flex d-md-flex">
+            <img src="./image/logo.svg" class="sidebar-brand d-flex d-md-flex" alt="">
+            <!-- <svg class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
+          <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#full"></use>
+        </svg> -->
+            <img src="./image/logo.svg" class="sidebar-brand-narrow bg-primary" alt="">
+            <!-- <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
+          <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#signet"></use>
+        </svg> -->
+        </div>
+        <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+            <li class="nav-item"><a class="nav-link" href="index.html">
+                    <svg class="nav-icon">
+                        <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-home"></use>
+                    </svg> Beranda</a></li>
+            <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+                    <svg class="nav-icon">
+                        <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-people"></use>
+                    </svg> Anggota</a>
+                <ul class="nav-group-items">
+                    <li class="nav-item"><a class="nav-link" href="users.html"><span class="nav-icon"></span> Master
+                            Level</a></li>
+                    <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+                            Import Data</a></li>
+                    <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+                            Export Data</a></li>
+                    <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+                            Program</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="./monitoring.html">
+                    <svg class="nav-icon">
+                        <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
+                    </svg> Monitoring</a>
+            </li>
+        </ul>
+        <ul>
+            <button class="btn badge-danger btn-logout">
+                <a href="./users.html" class="logout"><img src="./image/img/logout.png" alt=""> Logout</a>
+            </button>
+        </ul>
+    </div>
+    <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+        <header class="header bg-white border-0 px-3 py-2 d-lg-none">
+            <div class="container-fluid flex-column align-items-start">
+                <button class="header-toggler p-0 d-lg-none" type="button"
+                    onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+                    <svg class="icon icon-lg">
+                        <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <div class="body flex-grow-1 px-3 mt-4 mt-lg-5">
+            <div class="container">
+                <h4 class="fw-600 mb-3">Blasting Pesan</h4>
+                <form action="" class="pt-3">
+                    <div class="row mb-5">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="judul_pesan" class="form-label fw-700">Judul Pesan</label>
+                                <input type="text" id="judul_pesan" class="form-control" placeholder="Judul Pesan">
+                            </div>
+                            <div class="mb-3">
+                                <label for="isi_pesan" class="form-label fw-700">Isi Pesan</label>
+                                <textarea id="isi_pesan" class="form-control" cols="30" rows="6"
+                                    placeholder="Isi Pesan"></textarea>
+                            </div>
+                            <label class="form-label fw-700">Upload File</label>
+                            <div class="mb-3">
+                                <div class="card-input-file mb-2" id="card_input_file">
+                                    <input type="file" id="input_file" name="file[]" class="input-file" accept=".xls, .xlsx, .doc, .docx, .pdf, .jpg, .jpeg, .png" onchange="onchange_value('input_file', 'card_input_file')" />
+                                    <label for="input_file" class="label-upload-file">
+                                        <img src="./image/icon/upload.svg" class="card-icon mb-1" alt="">
+                                        Pilih File
+                                    </label>
+                                </div>
+                                <p><small>Maksimal ukuran <span class="fw-700">10MB</span>, dengan jenis file berikut <span class="fw-700">(.xls, .xlsx, .doc, .docx, .pdf, .jpg, .jpeg, .png)</span></small></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="test-input" class="form-label fw-700">Tanggal Blasting</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="datepicker_input form-control" placeholder="DD/MM/YYYY" required aria-label="DD/MM/YYYY">
+                                <span class="input-group-text">
+                                    <svg class="icon icon-lg">
+                                        <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="mb-3 mb-lg-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="1" id="recurring">
+                                    <label class="form-check-label" for="recurring">Auto Blasting (Recurring)</label>
+                                </div>
+                            </div>
+                            <div class="pt-lg-3 mb-3">
+                                <label for="test-select" class="form-label fw-700">Wilayah</label>
+                                <select id="test-select" class="form-select">
+                                    <option selected class="d-none">Pilih Wilayah</option>
+                                    <option value="1">Nanggroe Aceh Darussalam</option>
+                                    <option value="2">Sumatera Utara</option>
+                                    <option value="3">Sumatera Selatan</option>
+                                    <option value="4">Sumatera Barat</option>
+                                    <option value="5">Bengkulu</option>
+                                    <option value="6">Riau</option>
+                                    <option value="7">Kepulauan Riau</option>
+                                    <option value="8">Jambi</option>
+                                    <option value="9">Lampung</option>
+                                    <option value="10">Bangka Belitung</option>
+                                    <option value="11">Kalimantan Barat</option>
+                                    <option value="12">Kalimantan Timur</option>
+                                    <option value="13">Kalimantan Selatan</option>
+                                    <option value="14">Kalimantan Tengah</option>
+                                    <option value="15">Kalimantan Utara</option>
+                                    <option value="16">Banten</option>
+                                    <option value="17">DKI Jakarta</option>
+                                    <option value="18">Jawa Barat</option>
+                                    <option value="19">Jawa Tengah</option>
+                                    <option value="20">Daerah Istimewa Yogyakarta</option>
+                                    <option value="21">Jawa Timur</option>
+                                    <option value="22">Bali</option>
+                                    <option value="23">Nusa Tenggara Timur</option>
+                                    <option value="24">Nusa Tenggara Barat</option>
+                                    <option value="25">Gorontalo</option>
+                                    <option value="26">Sulawesi Barat</option>
+                                    <option value="27">Sulawesi Tengah</option>
+                                    <option value="28">Sulawesi Utara</option>
+                                    <option value="29">Sulawesi Tenggara</option>
+                                    <option value="30">Sulawesi Selatan</option>
+                                    <option value="31">Maluku Utara</option>
+                                    <option value="32">Maluku</option>
+                                    <option value="33">Papua Barat</option>
+                                    <option value="34">Papua</option>
+                                    <option value="35">Papua Tengah</option>
+                                    <option value="36">Papua Pegunungan</option>
+                                    <option value="37">Papua Selatan</option>
+                                    <option value="38">Papua Barat Daya</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="judul_pesan" class="form-label fw-700">Jumlah Anggota</label>
+                                <input type="number" id="jumlah_anggota" class="form-control" placeholder="Anggota Wilayah">
+                            </div>
+                            <div class="mb-3">
+                                <label for="test-select" class="form-label fw-700">Program (Opsional)</label>
+                                <select id="test-select" class="form-select">
+                                    <option selected>Pilih Program</option>
+                                    <option value="Program 1">Program 1</option>
+                                    <option value="Program 2">Program 2</option>
+                                    <option value="Program 3">Program 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-grid pt-4">
+                                <button class="btn btn-success btn-simpan" type="button">Buat Pesan</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer class="footer bg-white border-0">
+            <div>Made with ❤️ <span class="text-danger">ChatBlaster</span></div>
+        </footer>
+    </div>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!-- CoreUI and necessary plugins-->
+    <script src="./vendor/coreui/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <script src="./vendor/coreui/vendors/simplebar/js/simplebar.min.js"></script>
+    <script src="./js/pages/newusers.js"></script>
+    <!-- Vanilla Datepicker JS -->
+    <script src='https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js'></script>
+
+    <script>
+        /* Bootstrap 5 JS included */
+        /* vanillajs-datepicker 1.1.4 JS included */
+
+        const getDatePickerTitle = elem => {
+            // From the label or the aria-label
+            const label = elem.nextElementSibling;
+            let titleText = '';
+            if (label && label.tagName === 'LABEL') {
+                titleText = label.textContent;
+            } else {
+                titleText = elem.getAttribute('aria-label') || '';
+            }
+            return titleText;
+        }
+
+        const elems = document.querySelectorAll('.datepicker_input');
+        for (const elem of elems) {
+            const datepicker = new Datepicker(elem, {
+                'format': 'dd/mm/yyyy', // UK format
+                title: getDatePickerTitle(elem)
+            });
+        }     
+        
+        //handle on change input file
+        function onchange_value(name, preview) {
+            files = $(`#${name}`).prop('files');
+            var filesArr = Array.prototype.slice.call(files);
+
+            if (filesArr[0].size > 5242880) {
+                alert(`File ${filesArr[0].name} terlalu besar!`);
+                $(`#${name}`).val('');
+                $(`#${preview}`).removeClass('active');
+                $(`#${preview} label.label-upload-file`).html(`<img src="./image/icon/upload.svg" class="card-icon" alt="">Pilih File`);
+            } else {
+                $(`#${preview}`).addClass('active');
+                $(`#${preview} label.label-upload-file`).html(`<img src="./image/icon/upload.svg" class="card-icon" alt="">${filesArr[0].name}`);
+                console.log(filesArr[0].name, 'name'); //for testing in console
+            }
+            
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,3 +1,44 @@
+/* input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* input image */
+.card-input-file {
+    height: 100px;
+    position: relative;
+}
+.card-input-file .label-upload-file{
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    background: #FFFFFF;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #9D9EA2;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.card-input-file input{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
 .form-search{
     gap: 12px;
 }
