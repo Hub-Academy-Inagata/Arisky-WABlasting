@@ -1,12 +1,41 @@
-.btn-tambah{
-    height: 50px;
+
+:root{
+    --red-color: #E43631;
+}
+
+*{
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+}
+
+.btn-logout{
     width: 150px;
+}
+
+.btn-logout a{
+    text-decoration: none;
+    color: var(--red-color);
+}
+
+.bg-transparent{
+    transition: all ease-in 0.3s;
+}
+
+.header-color{
+    background-color: whitesmoke;
+    transition: all ease-in-out 0.5s;
+}
+
+.btn-tambah{
+    height: 45px;
+    width: 200px;
 }
 
 .btn-tambah a{
     text-decoration: none;
     color: white;
     font-size: 16px;
+    text-transform: capitalize;
 }
 
 .btn-aktif{
@@ -40,7 +69,10 @@
     padding: 5px;
 }
 
-.card .card-body .table .text-detail{
+.card .card-body .table .detail{
     font-size: 16px;
     text-transform: capitalize;
+    text-decoration: none;
+    color: var(--red-color);
+    list-style: none;
 }

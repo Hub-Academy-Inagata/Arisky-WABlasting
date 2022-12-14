@@ -1,0 +1,54 @@
+
+
+:root{
+    --red-color: #E43631;
+    --second-color: #CF312D;
+}
+
+*{
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+}
+
+.bg-transparent{
+    transition: all ease-in 0.3s;
+}
+
+.header-color{
+    background-color: whitesmoke;
+    transition: all ease-in-out 0.5s;
+}
+
+.form-control, .form-select{
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    padding: 12px !important;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+#test-textarea{
+    min-height: 140px;
+}
+
+.btn-simpan{
+    margin-top: 30px;
+}
+
+.btn-logout{
+    width: 150px;
+}
+
+.btn-logout a{
+    text-decoration: none;
+    color: var(--red-color);
+}
+
+.body .container .row h2{
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--second-color);
+    font-weight: 700;
+}
