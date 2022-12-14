@@ -1,0 +1,14 @@
+.line-clamp-1{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+@media(max-width: 576px){
+    h4{
+        font-size: 20px;
+    }
+    p{
+        font-size: 14px;
+    }
+}

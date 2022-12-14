@@ -112,6 +112,11 @@
     background: #A22623 !important;
     color: #ffffff !important;
 }
+.btn-outline-danger{
+    border-color: #E43631 !important;
+    background: #ffffff !important;
+    color: #E43631 !important;
+}
 
 /* form */
 .form-label{
