@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>ABCenter</title>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./vendor/coreui/assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- ./vendor/coreui/vendors styles-->
+    <link rel="stylesheet" href="./vendor/coreui/vendors/simplebar/css/simplebar.css">
+    <link rel="stylesheet" href="./vendor/coreui/css/vendors/simplebar.css">
+
+    <!-- Main styles for this application-->
+    <link href="./vendor/coreui/css/style.css" rel="stylesheet">
+
+    <!-- Custom CSS-->
+    <link href="./css/stylesheet.css" rel="stylesheet">
+    <link href="./css/layout/sidebar.css" rel="stylesheet">
+    <link href="./css/layout/body.css" rel="stylesheet">
+    <link href="./css/layout/footer.css" rel="stylesheet">
+    <link href="./css/components/form.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pages/detailuser.css">  
+
+
+  </head>
+  <body>
+    <div class="sidebar sidebar-dark bg-primary sidebar-fixed" id="sidebar">
+      <div class="sidebar-brand bg-primary d-flex d-md-flex">
+        <img src="./image/logo.svg" class="sidebar-brand bg-primary d-flex d-md-flex" alt="">
+        <!-- <svg class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
+          <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#full"></use>
+        </svg> -->
+        <img src="./image/logo.svg" class="sidebar-brand-narrow bg-primary" alt="">
+        <!-- <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
+          <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#signet"></use>
+        </svg> -->
+      </div>
+      <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+        <li class="nav-item"><a class="nav-link" href="index.html">
+            <svg class="nav-icon">
+              <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-home"></use>
+            </svg> Beranda</a></li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+                <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-people"></use>
+            </svg> Anggota</a>
+            <ul class="nav-group-items">
+                <li class="nav-item"><a class="nav-link" href="users.html"><span class="nav-icon"></span> Data Anggota</a></li>
+                <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Import Data</a></li>
+                <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span> Export Data</a></li>
+                <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span> Program</a></li>
+            </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="colors.html">
+            <svg class="nav-icon">
+              <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
+            </svg> Monitoring</a>
+        </li>
+      </ul>
+        <ul>
+            <button class="btn badge-danger btn-logout">
+                <a href="./users.html" class="logout"><img src="./image/img/logout.png" alt=""> Logout</a>
+            </button>
+        </ul>
+    </div>
+    <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+      <header class="header header-sticky bg-transparent border-0 pt-4 px-3 mb-4">
+        <div class="container-fluid flex-column align-items-start">
+          <button class="header-toggler p-0 d-lg-none mb-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+            <svg class="icon icon-lg">
+              <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+            </svg>
+          </button>
+            <h4 class="fw-600 mb-0">Tambah Data Anggota</h4>
+        </div>
+      </header>
+      <div class="body px-3">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-sm-6">
+                    <div class="mb-3">
+                        <h2>data diri</h2>
+                        <label for="test-input" class="form-label fw-700">NIK</label>
+                        <input type="text" id="test-input" class="form-control" value="39271837261726" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="test-input" class="form-label fw-700">nama lengkap</label><span class="text-danger fw-700"> *</span>
+                        <input type="text" id="test-input" class="form-control" value="Nolan Philips" readonly>
+                    </div>
+                    <label for="test-input" class="form-label fw-700">tanggal lahir</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" value="20/01/1994" readonly>
+                        <span class="input-group-text">
+                            <svg class="icon icon-lg">
+                                <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                              </svg>
+                        </span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="test-select" class="form-label fw-700">pekerjaan</label>
+                        <select id="test-select" class="form-select" disabled>
+                            <option selected>Karyawan Swasta</option>
+                            <option value="1">Belum/Tidak bekerja</option>
+                            <option value="2">Mengurus Rumah Tangga</option>
+                            <option value="3">Pelajar/Mahasiwa</option>
+                            <option value="4">Pensiunan</option>
+                            <option value="5">Pegawai Negeri Sipil</option>
+                            <option value="6">Tentara Nasional Indonesia</option>
+                            <option value="7">Kepolisian RI</option>
+                            <option value="8">Pedagang</option>
+                            <option value="9">Kepolisian RI</option>
+                            <option value="10">Karyawan Swasta</option>
+                            <option value="11">Lainnya</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="test-input" class="form-label fw-700">no. HP</label><span class="text-danger fw-700"> *</span>
+                        <input type="text" id="test-input" class="form-control" value="+6289827281611" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="test-select" class="form-label fw-700">level anggota</label>
+                        <select id="test-select" class="form-select" disabled>
+                            <option selected>Koordinator</option>
+                            <option value="1">Ketua</option>
+                            <option value="2">Wakil Ketua</option>
+                            <option value="3">Sekertaris I</option>
+                            <option value="4">Sekertaris II</option>
+                            <option value="5">Bendahara I</option>
+                            <option value="6">Bendahara II</option>
+                            <option value="7">Koordinator</option>
+                            <option value="8">Staff</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="mb-3">
+                        <h2>wilayah</h2>
+                        <label for="test-textarea" class="form-label fw-700">alamat</label><span class="text-danger fw-700"> *</span>
+                        <textarea id="test-textarea" class="form-control" cols="30" rows="5" placeholder="Jl. Martadiredja III No. 57 ..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="test-select" class="form-label fw-700">Provinsi</label>
+                        <select id="test-select" class="form-select" disabled>
+                            <option selected>Pilih Provinsi</option>
+                            <option value="1">Nanggroe Aceh Darussalam</option>
+                            <option value="2">Sumatera Utara</option>
+                            <option value="3">Sumatera Selatan</option>
+                            <option value="4">Sumatera Barat</option>
+                            <option value="5">Bengkulu</option>
+                            <option value="6">Riau</option>
+                            <option value="7">Kepulauan Riau</option>
+                            <option value="8">Jambi</option>
+                            <option value="9">Lampung</option>
+                            <option value="10">Bangka Belitung</option>
+                            <option value="11">Kalimantan Barat</option>
+                            <option value="12">Kalimantan Timur</option>
+                            <option value="13">Kalimantan Selatan</option>
+                            <option value="14">Kalimantan Tengah</option>
+                            <option value="15">Kalimantan Utara</option>
+                            <option value="16">Banten</option>
+                            <option value="17">DKI Jakarta</option>
+                            <option value="18">Jawa Barat</option>
+                            <option value="19">Jawa Tengah</option>
+                            <option value="20">Daerah Istimewa Yogyakarta</option>
+                            <option value="21">Jawa Timur</option>
+                            <option value="22">Bali</option>
+                            <option value="23">Nusa Tenggara Timur</option>
+                            <option value="24">Nusa Tenggara Barat</option>
+                            <option value="25">Gorontalo</option>
+                            <option value="26">Sulawesi Barat</option>
+                            <option value="27">Sulawesi Tengah</option>
+                            <option value="28">Sulawesi Utara</option>
+                            <option value="29">Sulawesi Tenggara</option>
+                            <option value="30">Sulawesi Selatan</option>
+                            <option value="31">Maluku Utara</option>
+                            <option value="32">Maluku</option>
+                            <option value="33">Papua Barat</option>
+                            <option value="34">Papua</option>
+                            <option value="35">Papua Tengah</option>
+                            <option value="36">Papua Pegunungan</option>
+                            <option value="37">Papua Selatan</option>
+                            <option value="38">Papua Barat Daya</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="test-select" class="form-label fw-700">Kota/Kabupaten</label>
+                        <select id="test-select" class="form-select" disabled>
+                            <option selected>Kota Malang</option>
+                            <option value="1">Kabupaten Bangkalan</option>
+                            <option value="2">Kabupaten Banyuwangi</option>
+                            <option value="3">Kabupaten Blitar</option>
+                            <option value="4">Kabupaten Bojonegoro</option>
+                            <option value="5">Kabupaten Bondowoso</option>
+                            <option value="6">Kabupaten Gresik</option>
+                            <option value="7">Kabupaten Jember</option>
+                            <option value="8">Kabupaten Jombang</option>
+                            <option value="9">Kabupaten Kediri</option>
+                            <option value="10">Kabupaten Lamongan</option>
+                            <option value="11">Kabupaten Lumajang</option>
+                            <option value="12">Kabupaten Madiun</option>
+                            <option value="13">Kabupaten Magetan</option>
+                            <option value="14">Kabupaten Malang</option>
+                            <option value="15">Kabupaten Mojokerto</option>
+                            <option value="16">Kabupaten Nganjuk</option>
+                            <option value="17">Kabupaten Ngawi</option>
+                            <option value="18">Kabupaten Pacitan</option>
+                            <option value="19">Kabupaten Pamekasan</option>
+                            <option value="20">Kabupaten Pasuruan</option>
+                            <option value="21">Kabupaten Ponorogo</option>
+                            <option value="22">Kabupaten Probolinggo</option>
+                            <option value="23">Kabupaten Sampang</option>
+                            <option value="24">Kabupaten Sidoarjo</option>
+                            <option value="25">Kabupaten Situbondo</option>
+                            <option value="26">Kabupaten Sumenep</option>
+                            <option value="27">Kabupaten Trenggalek</option>
+                            <option value="28">Kabupaten Tuban</option>
+                            <option value="29">Kabupaten Tulungagung</option>
+                            <option value="30">Kota Batu</option>
+                            <option value="31">Kota Blitar</option>
+                            <option value="32">Kota Kediri</option>
+                            <option value="33">Kota Madiun</option>
+                            <option value="34">Kota Malang</option>
+                            <option value="35">Kota Mojokerto</option>
+                            <option value="36">Kota Pasuruan</option>
+                            <option value="37">Kota Probolinggo</option>
+                            <option value="38">Kota Surabaya</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="test-select" class="form-label fw-700">Kecamatan</label>
+                        <select id="test-select" class="form-select" disabled>
+                            <option selected>Kecamatan Klojen</option>
+                            <option value="1">Kecamatan Klojen</option>
+                            <option value="2">Kecamatan Blimbing</option>
+                            <option value="3">Kecamatan Lowokwaru</option>
+                            <option value="4">Kecamatan Sukun</option>
+                            <option value="5">Kecamatan Kedungkandang</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="test-select" class="form-label fw-700">Desa/Kelurahan</label>
+                        <select id="test-select" class="form-select" disabled>
+                            <option selected>Kelurahan Kasin</option>
+                            <option value="1">Kelurahan Kasin</option>
+                            <option value="2">Kelurahan Blimbing</option>
+                            <option value="3">Kelurahan Sumbersari</option>
+                            <option value="4">Kelurahan Sukun</option>
+                            <option value="5">Kelurahan Kedungkandang</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 d-flex flex-row">
+                    <label for="test-input" class="form-label fw-700">Status Anggota :</label>
+                    <div class="form-check" style="margin-left: 20px;" disabled>
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                              Aktif
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-sm-6">
+                    <div class="mb-3">
+                        <div class="d-grid">
+                            <button class="btn badge-danger" type="button"><img src="./image/img/edit.png" alt=""> Ubah Data</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="mb-3">
+                        <div class="d-grid">
+                            <button class="btn btn-danger" type="button"><img src="./image/img/trash.png" alt=""> Hapus</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <footer class="footer bg-transparent border-0">
+        <div>Made with ❤️ <span class="text-danger">ChatBlaster</span></div>
+      </footer>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="./vendor/coreui/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <script src="./vendor/coreui/vendors/simplebar/js/simplebar.min.js"></script>
+    <script src="./js/pages/detailuser.js"></script>
+
+  </body>
+</html>
