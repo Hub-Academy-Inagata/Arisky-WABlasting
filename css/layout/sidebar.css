@@ -11,3 +11,10 @@
 .sidebar-nav .nav-link.active{
     background: #CF312D;
 }
+.btn-logout{
+    width: 150px;
+}
+.btn-logout a{
+    text-decoration: none;
+    color: var(--red-color);
+}

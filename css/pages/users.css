@@ -8,15 +8,6 @@
     text-transform: capitalize;
 }
 
-.btn-logout{
-    width: 150px;
-}
-
-.btn-logout a{
-    text-decoration: none;
-    color: var(--red-color);
-}
-
 .bg-transparent{
     transition: all ease-in 0.3s;
 }
