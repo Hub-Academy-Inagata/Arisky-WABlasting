@@ -148,6 +148,12 @@ html:not([dir=rtl]) .input-group > :not(:first-child):not(.dropdown-menu):not(.v
 html:not([dir=rtl]) .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating), html:not([dir=rtl]) .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), html:not([dir=rtl]) .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control, html:not([dir=rtl]) .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select{
     border-right: none;
 }
+.form-check{
+    margin-bottom: 12px;
+}
+.form-check:last-child{
+    margin-bottom: 0;
+}
 .form-check-label{
     font-weight: 400;
     font-size: 14px;

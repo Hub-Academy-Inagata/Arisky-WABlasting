@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
 
     <!-- ./vendor/coreui/vendors styles-->
     <link rel="stylesheet" href="./vendor/coreui/vendors/simplebar/css/simplebar.css">
@@ -31,6 +33,7 @@
     <!-- CSS Component -->
     <link href="./css/components/form.css" rel="stylesheet">
     <link href="./css/components/table.css" rel="stylesheet">
+    <link href="./css/components/modal.css" rel="stylesheet">
     <!-- CSS Layout -->
     <link href="./css/layout/header.css" rel="stylesheet">
     <link href="./css/layout/sidebar.css" rel="stylesheet">
@@ -47,45 +50,48 @@
 
 <body>
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
-      <div class="sidebar-brand d-flex d-md-flex">
-        <img src="./image/logo.svg" class="sidebar-brand d-flex d-md-flex" alt="">
-        <!-- <svg class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
+        <div class="sidebar-brand d-flex d-md-flex">
+            <img src="./image/logo.svg" class="sidebar-brand d-flex d-md-flex" alt="">
+            <!-- <svg class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
             <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#full"></use>
           </svg> -->
-        <img src="./image/logo.svg" class="sidebar-brand-narrow bg-primary" alt="">
-        <!-- <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
+            <img src="./image/logo.svg" class="sidebar-brand-narrow bg-primary" alt="">
+            <!-- <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
             <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#signet"></use>
           </svg> -->
-      </div>
-      <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
-        <li class="nav-item"><a class="nav-link" href="./index.html">
-            <svg class="nav-icon">
-              <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
-            </svg> Beranda</a></li>
-        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
-            <svg class="nav-icon">
-              <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-            </svg> Anggota</a>
-          <ul class="nav-group-items">
-            <li class="nav-item"><a class="nav-link" href="users.html"><span class="nav-icon"></span> Master Level</a></li>
-            <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> Import
-                Data</a></li>
-            <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span> Export
-                Data</a></li>
-            <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
-                Program</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="./monitoring.html">
-            <svg class="nav-icon">
-              <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
-            </svg> Monitoring</a></li>
-      </ul>
-      <ul>
-          <button class="btn badge-danger btn-logout">
-              <a href="#" class="logout"><img src="./image/img/logout.png" alt=""> Logout</a>
-          </button>
-      </ul>
+        </div>
+        <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+            <li class="nav-item"><a class="nav-link" href="./index.html">
+                    <svg class="nav-icon">
+                        <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
+                    </svg> Beranda</a></li>
+            <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+                    <svg class="nav-icon">
+                        <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+                    </svg> Anggota</a>
+                <ul class="nav-group-items">
+                    <li class="nav-item"><a class="nav-link" href="users.html"><span class="nav-icon"></span> Master
+                            Level</a></li>
+                    <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span>
+                            Import
+                            Data</a></li>
+                    <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+                            Export
+                            Data</a></li>
+                    <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span>
+                            Program</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="./monitoring.html">
+                    <svg class="nav-icon">
+                        <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
+                    </svg> Monitoring</a></li>
+        </ul>
+        <ul>
+            <button class="btn badge-danger btn-logout">
+                <a href="#" class="logout"><img src="./image/img/logout.png" alt=""> Logout</a>
+            </button>
+        </ul>
     </div>
     <div class="wrapper d-flex flex-column min-vh-100 bg-light">
         <header class="header bg-white border-0 px-3 py-2 d-lg-none">
@@ -116,22 +122,29 @@
                             <label class="form-label fw-700">Upload File</label>
                             <div class="mb-3">
                                 <div class="card-input-file mb-2" id="card_input_file">
-                                    <input type="file" id="input_file" name="file[]" class="input-file" accept=".xls, .xlsx, .doc, .docx, .pdf, .jpg, .jpeg, .png" onchange="onchange_value('input_file', 'card_input_file')" />
+                                    <input type="file" id="input_file" name="file[]" class="input-file"
+                                        accept=".xls, .xlsx, .doc, .docx, .pdf, .jpg, .jpeg, .png"
+                                        onchange="onchange_value('input_file', 'card_input_file')" />
                                     <label for="input_file" class="label-upload-file">
                                         <img src="./image/icon/upload.svg" class="card-icon mb-1" alt="">
                                         Pilih File
                                     </label>
                                 </div>
-                                <p><small>Maksimal ukuran <span class="fw-700">10MB</span>, dengan jenis file berikut <span class="fw-700">(.xls, .xlsx, .doc, .docx, .pdf, .jpg, .jpeg, .png)</span></small></p>
+                                <p><small>Maksimal ukuran <span class="fw-700">10MB</span>, dengan jenis file berikut
+                                        <span class="fw-700">(.xls, .xlsx, .doc, .docx, .pdf, .jpg, .jpeg,
+                                            .png)</span></small></p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <label for="test-input" class="form-label fw-700">Tanggal Blasting</label>
                             <div class="input-group mb-3">
-                                <input type="text" class="datepicker_input form-control" placeholder="DD/MM/YYYY" required aria-label="DD/MM/YYYY">
+                                <input type="text" class="datepicker_input form-control" placeholder="DD/MM/YYYY"
+                                    required aria-label="DD/MM/YYYY">
                                 <span class="input-group-text">
                                     <svg class="icon icon-lg">
-                                        <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                                        <use
+                                            xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-calendar">
+                                        </use>
                                     </svg>
                                 </span>
                             </div>
@@ -187,7 +200,8 @@
                             </div>
                             <div class="mb-3">
                                 <label for="judul_pesan" class="form-label fw-700">Jumlah Anggota</label>
-                                <input type="number" id="jumlah_anggota" class="form-control" placeholder="Anggota Wilayah">
+                                <input type="number" id="jumlah_anggota" class="form-control"
+                                    placeholder="Anggota Wilayah" data-bs-toggle="modal" data-bs-target="#modalPilihAnggota">
                             </div>
                             <div class="mb-3">
                                 <label for="test-select" class="form-label fw-700">Program (Opsional)</label>
@@ -206,6 +220,46 @@
                         </div>
                     </div>
                 </form>
+
+                <!-- Modal -->
+                <div class="modal fade" id="modalPilihAnggota" tabindex="-1" aria-labelledby="modalPilihAnggotaLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-white">
+                            <div class="modal-header bg-white border-0">
+                                <h1 class="modal-title fs-5 text-danger fw-600" id="modalPilihAnggotaLabel">Pilih Anggota</h1>
+                            </div>
+                            <div class="modal-body bg-white py-4">
+                                <form>
+                                    <div class="input-group flex-nowrap mb-3">
+                                        <span class="input-group-text" id="addon-wrapping"><img src="./image/img/search-normal.png" alt=""></span>
+                                        <input type="text" class="form-control" id="search_anggota" placeholder="Cari Muhaimin Slamet" aria-label="search" aria-describedby="addon-wrapping">
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="Angel Korsgaard" id="anggota_0" checked>
+                                        <label class="form-check-label" for="recurring">Angel Korsgaard</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="Tatiana Botosh" id="anggota_1" checked>
+                                        <label class="form-check-label" for="recurring">Tatiana Botosh</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="Jocelyn Kenter" id="anggota_2" checked>
+                                        <label class="form-check-label" for="recurring">Jocelyn Kenter</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="Maren Franci" id="anggota_3" checked>
+                                        <label class="form-check-label" for="recurring">Maren Franci</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer bg-white border-0">
+                                <button type="button" class="btn btn-success w-100">Simpan Data</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
         <footer class="footer bg-white border-0">
@@ -214,7 +268,10 @@
     </div>
 
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
     <!-- CoreUI and necessary plugins-->
     <script src="./vendor/coreui/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
     <script src="./vendor/coreui/vendors/simplebar/js/simplebar.min.js"></script>
@@ -244,8 +301,8 @@
                 'format': 'dd/mm/yyyy', // UK format
                 title: getDatePickerTitle(elem)
             });
-        }     
-        
+        }
+
         //handle on change input file
         function onchange_value(name, preview) {
             files = $(`#${name}`).prop('files');
@@ -261,7 +318,7 @@
                 $(`#${preview} label.label-upload-file`).html(`<img src="./image/icon/upload.svg" class="card-icon" alt="">${filesArr[0].name}`);
                 console.log(filesArr[0].name, 'name'); //for testing in console
             }
-            
+
         }
 
     </script>
