@@ -96,56 +96,103 @@
     </header>
     <div class="body flex-grow-1 px-3 mt-4 mt-lg-5">
       <div class="container-lg dashboard">
-        <h4 class="fw-600 mb-0 mb-5">Selamat Datang, Halo <span class="text-danger">Admin</span></h4>
+        <h4 class="fw-600 mb-0 mb-5">List Penerima Pesan</h4>
         <div class="row">
-          <div class="col-md-6 ps-2">
-            <div class="card card-stats border-0 ms-4 mb-3 mb-md-4">
-              <img src="./image/icon/stat-anggota.svg" class="card-icon" alt="">
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-stats border-0 mb-3 mb-md-4">
               <div class="card-body">
                 <div class="d-flex align-items-center mb-1">
                   <div class="indicator indicator-success me-1"></div>
                   <p class="mb-0 text-black">Total Anggota</p>
                 </div>
-                <h4 class="text-danger fw-600 mb-0">200.000 Orang</h4>
+                <h4 class="text-danger fw-600 mb-0">245 Orang</h4>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="card card-stats border-0 bg-warning mb-4 mb-md-4">
-              <a href="./buat-pesan.html" class="card-body text-decoration-none">
-                <p class="text-dark fw-600 mb-0">Kirim Pesan untuk Anggota</p>
-                <h4 class="text-dark fw-600 mb-0 d-flex align-items-center">Buat Pesan Sekarang <img
-                    src="./image/icon/mailbox.svg" class="ms-2" alt="mailbox"></h4>
-              </a>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-stats border-0 mb-3 mb-md-4">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-1">
+                  <div class="indicator indicator-success me-1"></div>
+                  <p class="mb-0 text-black">Tidak Sudah Dibaca</p>
+                </div>
+                <h4 class="text-danger fw-600 mb-0">5 Orang</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-stats border-0 mb-3 mb-md-4">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-1">
+                  <div class="indicator indicator-success me-1"></div>
+                  <p class="mb-0 text-black">Sudah Dibaca</p>
+                </div>
+                <h4 class="text-danger fw-600 mb-0">240 Orang</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-stats border-0 mb-3 mb-md-4">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-1">
+                  <div class="indicator indicator-success me-1"></div>
+                  <p class="mb-0 text-black">Belum Dibaca</p>
+                </div>
+                <h4 class="text-danger fw-600 mb-0">5 Orang</h4>
+              </div>
             </div>
           </div>
         </div>
         <div class="card card-main">
-          <div class="card-header border-0 bg-white d-flex align-items-center justify-content-between pt-3 px-3 pb-0">
-            <h5 class="fw-700 text-secondary mb-0">Monitoring Status</h5>
-            <a href="" class="text-primary text-decoration-none fw-600 mb-0">Lihat Semua</a>
+          <div class="card-header border-0 bg-white d-flex flex-column flex-md-row align-items-md-center justify-content-between pt-3 px-3 pb-0">
+            <h5 class="fw-700 text-dark mb-2 mb-md-0">Nama Ketua: <span class="text-danger">Ahmad Dokidis</span></h5>
+            <h5 class="text-dark fw-600 mb-0">Wilayah: <span class="text-primary">Kecamatan Klojen</span></h5>
           </div>
           <div class="card-body overflow-auto pt-4">
+            <p class="text-dark fw-600 pb-2 mb-0">[Judul Pesan]</p>
+            <p class="text-dark fw-600 pb-1 mb-4"><small class="text-dark fw-600">Lorem ipsum dolor sit amet consectetur. Non morbi nascetur in at eget sed elementum felis. Nunc adipiscing sed et lobortis bibendum. Massa magna accumsan quis ac. Consequat tellus eros ultrices sem vel adipiscing tempus curabitur ut. Sapien cras massa id dolor amet cursus tempus. Condimentum tellus lorem vitae purus scelerisque vestibulum feugiat semper libero. Vitae fames consectetur scelerisque magna non nibh. In nisl nullam elit vitae sed. Vitae sit velit laoreet purus ullamcorper sit adipiscing porttitor. In ultricies maecenas imperdiet sodales in mattis blandit feugiat. Porttitor risus volutpat tincidunt hendrerit. Leo urna nec viverra vitae amet varius dictum. Volutpat auctor sit morbi nisl. Eget feugiat sed mi viverra tempor netus et ultricies.</small></p>
             <table class="table">
               <thead>
                 <tr>
                   <th class="text-secondary fw-600" style="width: 5%;" scope="col">No</th>
-                  <th class="text-secondary fw-600" style="width: 20%;" scope="col">Nama Pengirim</th>
-                  <th class="text-secondary fw-600" style="width: 15%;" scope="col">Tgl Pengiriman</th>
-                  <th class="text-secondary fw-600" style="width: 15%;" scope="col">Program</th>
-                  <th class="text-secondary fw-600" style="width: 20%;" scope="col">Judul Pesan</th>
-                  <th class="text-secondary fw-600 text-center" style="width: 17%;" scope="col">List Penerima</th>
+                  <th class="text-secondary fw-600" style="width: 20%;" scope="col">Nama Anggota</th>
+                  <th class="text-secondary fw-600 text-center" style="width: 9%;" scope="col">Status</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="align-middle"><p class="mb-0">1</p></td>
                   <td class="align-middle"><p class="mb-0">Jakob Ekstrom Bothman</p></td>
-                  <td class="align-middle"><p class="mb-0">16/08/2013</p></td>
-                  <td class="align-middle"><p class="mb-0">Program 3</p></td>
-                  <td class="align-middle"><p class="line-clamp-1 mb-0">Lorem ipsum dolor sit amet consectetur. Faucibus praesent ut nullam sed lorem et leo massa.</p></td>
                   <td class="align-middle">
-                    <a href="./penerima-pesan.html" class="btn btn-outline-danger py-2 px-3 d-flex align-items-center justify-content-center"><img src="./image/icon/lihat-detail.svg" class="me-3" alt="lihat-detail"> Lihat Detail</a>
+                    <div class="badge badge-success mb-3 w-100">Sudah Dibaca</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align-middle"><p class="mb-0">2</p></td>
+                  <td class="align-middle"><p class="mb-0">Zain Stanton</p></td>
+                  <td class="align-middle">
+                    <div class="badge badge-warning mb-3 w-100">Terkirim</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align-middle"><p class="mb-0">3</p></td>
+                  <td class="align-middle"><p class="mb-0">Jaylon Gouse</p></td>
+                  <td class="align-middle">
+                    <div class="badge badge-danger mb-3 w-100">Tidak Terkirim</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align-middle"><p class="mb-0">4</p></td>
+                  <td class="align-middle"><p class="mb-0">Justin Aminoff</p></td>
+                  <td class="align-middle">
+                    <div class="badge badge-success mb-3 w-100">Sudah Dibaca</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align-middle"><p class="mb-0">5</p></td>
+                  <td class="align-middle"><p class="mb-0">Giana Aminoff</p></td>
+                  <td class="align-middle">
+                    <div class="badge badge-success mb-3 w-100">Sudah Dibaca</div>
                   </td>
                 </tr>
               </tbody>

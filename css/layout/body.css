@@ -7,3 +7,15 @@
     border-radius: 4px;
     background: #FFFFFF;
 }
+.card-main .card-header:first-child{
+    border-radius: 10px 10px 0 0;
+}
+
+@media(max-width: 576px){
+    .card-main .card-header:first-child h5{
+        font-size: 16px;
+    }
+    .card-main .card-header:first-child a{
+        font-size: 12px;
+    }
+}
