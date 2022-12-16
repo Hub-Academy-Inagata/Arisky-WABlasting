@@ -49,3 +49,9 @@ input[type=number] {
   flex-wrap: nowrap;
   white-space: nowrap;
 }
+
+@media(max-width: 768px){
+  .form-search{
+    gap: 24px;
+  }
+}
