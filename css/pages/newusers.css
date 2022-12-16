@@ -8,6 +8,7 @@
 *{
     font-family: 'Lato', sans-serif;
     text-transform: capitalize;
+    font-size: 14px;
 }
 
 .bg-transparent{
@@ -46,9 +47,21 @@
     color: var(--red-color);
 }
 
-.body .container .row h2{
+.subjudul{
     font-size: 20px;
     line-height: 24px;
     color: var(--second-color);
     font-weight: 700;
+    margin-top: 20px;
+}
+
+.modal-header h1{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--second-color);
+}
+
+.btn-modal{
+    width: 40%;
 }
