@@ -6,6 +6,7 @@
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.01);
     border-radius: 4px;
     background: #FFFFFF;
+    margin-bottom: 48px;
 }
 .card-main .card-header:first-child{
     border-radius: 10px 10px 0 0;
