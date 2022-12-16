@@ -11,7 +11,8 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
@@ -25,11 +26,19 @@
     <link href="./vendor/coreui/css/style.css" rel="stylesheet">
 
     <!-- Custom CSS-->
+    <!-- Stylesheet -->
     <link href="./css/stylesheet.css" rel="stylesheet">
+    <!-- CSS Base -->
+    <link href="./css/base/typography.css" rel="stylesheet">
+    <!-- CSS Component -->
+    <link href="./css/components/form.css" rel="stylesheet">
+    <link href="./css/components/table.css" rel="stylesheet">
+    <!-- CSS Layout -->
+    <link href="./css/layout/header.css" rel="stylesheet">
     <link href="./css/layout/sidebar.css" rel="stylesheet">
     <link href="./css/layout/body.css" rel="stylesheet">
     <link href="./css/layout/footer.css" rel="stylesheet">
-    <link href="./css/components/form.css" rel="stylesheet">
+    <!-- CSS Pages -->
     <link rel="stylesheet" href="./css/pages/newusers.css">
      
     <!-- Vanilla Datepicker CSS -->
@@ -101,13 +110,11 @@
                     <input type="text" id="test-input" class="form-control" placeholder="nomor induk kependudukan">
                 </div>
                 <div class="mb-3">
-                  <label for="validationDefaultUsername" class="form-label fw-700">nama lengkap</label>
+                  <label for="test-input" class="form-label fw-700">nama lengkap</label>
                   <span class="text-danger fw-700" id="inputGroupPrepend2"> *</span>
-                  <div class="input-group">
-                    <input type="text" class="form-control" id="validationDefaultUsername" placeholder="nama lengkap anggota" aria-describedby="inputGroupPrepend2" required>
-                    <div class="invalid-feedback">
-                      tolong isi nama lengkap.
-                    </div>
+                  <input type="text" id="validationDefaultUsername" class="form-control" placeholder="nama lengkap anggota" aria-describedby="inputGroupPrepend2" required>
+                  <div class="invalid-feedback">
+                    tolong isi nama lengkap.
                   </div>
                 </div>
                 <div class="mb-3">
@@ -262,7 +269,7 @@
                     <label for="test-select" class="form-label fw-700">Kecamatan</label>
                     <select id="test-select" class="form-select">
                         <option selected>Pilih Kecamatan</option>
-                        <option value="1">Kecamatan Kasin</option>
+                        <option value="1">Kecamatan Klojen</option>
                         <option value="2">Kecamatan Blimbing</option>
                         <option value="3">Kecamatan Lowokwaru</option>
                         <option value="4">Kecamatan Sukun</option>
@@ -273,7 +280,7 @@
                     <label for="test-select" class="form-label fw-700">Desa/Kelurahan</label>
                     <select id="test-select" class="form-select">
                         <option selected>Pilih Desa/Kelurahan</option>
-                        <option value="1">Kelurahan Klojen</option>
+                        <option value="1">Kelurahan Kasin</option>
                         <option value="2">Kelurahan Blimbing</option>
                         <option value="3">Kelurahan Sumbersari</option>
                         <option value="4">Kelurahan Sukun</option>
@@ -284,7 +291,7 @@
             <div class="col-12">
                 <div class="mb-3">
                   <div class="d-grid simpan">
-                    <!-- Button trigger modal -->
+                    <!-- Button --><!-- Button trigger modal -->
                     <button class="btn btn-success btn-simpan" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">
                       <img src="./image/img/tick-circle.png" alt=""> Simpan Data
                     </button>
@@ -301,7 +308,7 @@
                           </div>
                           <div class="modal-footer d-grid gap-2 d-md-flex justify-content-center">
                             <button type="button" class="btn btn-modal btn-danger" data-bs-dismiss="modal">Batal</button>
-                            <button type="button" class="btn btn-modal btn-outline-success">Simpan Data</button>
+                            <button type="button" class="btn btn-modal btn-outline-success"> Simpan Data</button>
                           </div>
                         </div>
                       </div>
@@ -324,33 +331,6 @@
     <script src="./vendor/coreui/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
     <script src="./vendor/coreui/vendors/simplebar/js/simplebar.min.js"></script>
     <script src="./js/pages/newusers.js"></script>
-    <!-- Vanilla Datepicker JS -->
-    <script src='https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js'></script>
-
-    <script>
-        /* Bootstrap 5 JS included */
-        /* vanillajs-datepicker 1.1.4 JS included */
-        
-        const getDatePickerTitle = elem => {
-          // From the label or the aria-label
-          const label = elem.nextElementSibling;
-          let titleText = '';
-          if (label && label.tagName === 'LABEL') {
-            titleText = label.textContent;
-          } else {
-            titleText = elem.getAttribute('aria-label') || '';
-          }
-          return titleText;
-        }
-        
-        const elems = document.querySelectorAll('.datepicker_input');
-        for (const elem of elems) {
-          const datepicker = new Datepicker(elem, {
-            'format': 'dd/mm/yyyy', // UK format
-            title: getDatePickerTitle(elem)
-          });
-        }      
-        </script>
 
   </body>
 </html>

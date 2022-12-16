@@ -11,7 +11,8 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 
     <!-- ./vendor/coreui/vendors styles-->
@@ -22,12 +23,21 @@
     <link href="./vendor/coreui/css/style.css" rel="stylesheet">
 
     <!-- Custom CSS-->
+    <!-- Stylesheet -->
     <link href="./css/stylesheet.css" rel="stylesheet">
+    <!-- CSS Base -->
+    <link href="./css/base/typography.css" rel="stylesheet">
+    <!-- CSS Component -->
+    <link href="./css/components/form.css" rel="stylesheet">
+    <link href="./css/components/table.css" rel="stylesheet">
+    <!-- CSS Layout -->
+    <link href="./css/layout/header.css" rel="stylesheet">
     <link href="./css/layout/sidebar.css" rel="stylesheet">
     <link href="./css/layout/body.css" rel="stylesheet">
     <link href="./css/layout/footer.css" rel="stylesheet">
-    <link href="./css/components/form.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/pages/users.css">
+    <!-- CSS Pages -->
+    <link href="./css/pages/users.css" rel="stylesheet">
+
   </head>
   <body>
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
@@ -91,9 +101,9 @@
                 <span class="input-group-text" id="addon-wrapping"><img src="./image/img/search-normal.png" alt=""></span>
               <input type="text" class="form-control" placeholder="Cari Muhaimin Slamet" aria-label="Cari Muhaimin Slamet" aria-describedby="addon-wrapping">
               </div>
-              <button class="btn btn-danger btn-tambah">
-                <a href="newusers.html" class="tambah"><img src="./image/img/add-circle.png" alt=""> tambah anggota</a>
-              </button>
+              <td class="align-middle">
+                <a href="./newusers.html" class="btn btn-danger btn-tambah d-flex align-items-center justify-content-center"><img src="./image/img/add-circle.png" class="me-3" alt="tambah-anggota">  tambah anggota</a>
+              </td>
             </div>
           </div>
           <div class="card card-main">
@@ -102,94 +112,114 @@
                   <table class="table">
                     <thead>
                       <tr>
-                        <th class="text-secondary fw-600" scope="col"><h6>No</h6></th>
-                        <th class="text-secondary fw-600" scope="col"><h6>Nama Anggota</h6></th>
-                        <th class="text-secondary fw-600" scope="col"><h6>No. Telp</h6></th>
-                        <th class="text-secondary fw-600" scope="col"><h6>Alamat</h6></th>
-                        <th class="text-secondary fw-600" scope="col"><h6 class="text-center">Status</h6></th>
-                        <th class="text-secondary fw-600" scope="col"><h6 class="text-center">Aksi</h6></th>
+                        <th class="text-secondary fw-600" style="width: 5%;" scope="col">No</th>
+                        <th class="text-secondary fw-600" style="width: 20%;" scope="col">Nama Anggota</th>
+                        <th class="text-secondary fw-600" style="width: 12%;" scope="col">No. Telp</th>
+                        <th class="text-secondary fw-600" style="width: 25%;" scope="col">Alamat</th>
+                        <th class="text-secondary fw-600 text-center" style="width: 15%;" scope="col">Status</th>
+                        <th class="text-secondary fw-600 text-center" style="width: 15%;" scope="col">Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row">1</th>
-                        <td>Jakob Ekstrom Bothman</td>
-                        <td>089217827382</td>
-                        <td>2972 Westheimer Rd. Santa Ana, Illinois 85486 </td>
-                        <td><div class="badge badge-success btn-aktif mb-3"><p class="text-aktif">Aktif</p></div></td>
-                        <td><button class="btn btn-outline-danger btn-detail" type="button"><a href="#" class="detail"><img src="./image/img/eye.png" alt=""> Lihat Detail</a></button></td>
+                        <td class="align-middle"><p class="mb-0">1</p></td>
+                        <td class="align-middle"><p class="mb-0">Jakob Ekstrom Bothman</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">2972 Westheimer Rd. Santa Ana, Illinois 85486</p></td>
+                        <td class="align-middle"><div class="badge badge-success btn-aktif py-2 px-3 d-flex align-items-center justify-content-center"><p class="line-clamp-1 mb-0 text-aktif">Aktif</p></div></td>
+                        <td class="align-middle">
+                          <a href="./detailuser.html" class="btn btn-outline-danger py-2 px-3 d-flex align-items-center justify-content-center"><img src="./image/img/eye.png" class="me-3" alt="lihat-detail"> Lihat Detail</a>
+                        </td>
                       </tr>
                       <tr>
-                        <th scope="row">2</th>
-                        <td>Zain Stanton</td>
-                        <td>089217827382</td>
-                        <td>2972 Westheimer Rd. Santa Ana, Illinois 85486 </td>
-                        <td><div class="badge badge-success btn-aktif mb-3"><p class="text-aktif">Aktif</p></div></td>
-                        <td><button class="btn btn-outline-danger btn-detail" type="button"><a href="#" class="detail"><img src="./image/img/eye.png" alt=""> Lihat Detail</a></button></td>
+                        <td class="align-middle"><p class="mb-0">2</p></td>
+                        <td class="align-middle"><p class="mb-0">Zain Stanton</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">2972 Westheimer Rd. Santa Ana, Illinois 85486</p></td>
+                        <td class="align-middle"><div class="badge badge-success btn-aktif py-2 px-3 d-flex align-items-center justify-content-center"><p class="line-clamp-1 mb-0 text-aktif">Aktif</p></div></td>
+                        <td class="align-middle">
+                          <a href="./detailuser.html" class="btn btn-outline-danger py-2 px-3 d-flex align-items-center justify-content-center"><img src="./image/img/eye.png" class="me-3" alt="lihat-detail"> Lihat Detail</a>
+                        </td>
                       </tr>
                       <tr>
-                        <th scope="row">3</th>
-                        <td>Jaylon Gouse</td>
-                        <td>089217827382</td>
-                        <td>2715 Ash Dr. San Jose, South Dakota 83475</td>
-                        <td><div class="badge badge-success btn-aktif mb-3"><p class="text-aktif">Aktif</p></div></td>
-                        <td><button class="btn btn-outline-danger btn-detail" type="button"><a href="#" class="detail"><img src="./image/img/eye.png" alt=""> Lihat Detail</a></button></td>
+                        <td class="align-middle"><p class="mb-0">3</p></td>
+                        <td class="align-middle"><p class="mb-0">Jaylon Gouse</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">2715 Ash Dr. San Jose, South Dakota 83475</p></td>
+                        <td class="align-middle"><div class="badge badge-success btn-aktif py-2 px-3 d-flex align-items-center justify-content-center"><p class="line-clamp-1 mb-0 text-aktif">Aktif</p></div></td>
+                        <td class="align-middle">
+                          <a href="./detailuser.html" class="btn btn-outline-danger py-2 px-3 d-flex align-items-center justify-content-center"><img src="./image/img/eye.png" class="me-3" alt="lihat-detail"> Lihat Detail</a>
+                        </td>
                       </tr>
                       <tr>
-                        <th scope="row">4</th>
-                        <td>Justin Aminoff</td>
-                        <td>089217827382</td>
-                        <td>2118 Thornridge Cir. Syracuse, Connecticut 35624</td>
-                        <td><div class="badge badge-success btn-aktif mb-3"><p class="text-aktif">Aktif</p></div></td>
-                        <td><button class="btn btn-outline-danger btn-detail" type="button"><a href="#" class="detail"><img src="./image/img/eye.png" alt=""> Lihat Detail</a></button></td>
+                        <td class="align-middle"><p class="mb-0">4</p></td>
+                        <td class="align-middle"><p class="mb-0">Justin Aminoff</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">2118 Thornridge Cir. Syracuse, Connecticut 35624</p></td>
+                        <td class="align-middle"><div class="badge badge-success btn-aktif py-2 px-3 d-flex align-items-center justify-content-center"><p class="line-clamp-1 mb-0 text-aktif">Aktif</p></div></td>
+                        <td class="align-middle">
+                          <a href="./detailuser.html" class="btn btn-outline-danger py-2 px-3 d-flex align-items-center justify-content-center"><img src="./image/img/eye.png" class="me-3" alt="lihat-detail"> Lihat Detail</a>
+                        </td>
                       </tr>
                       <tr>
-                        <th scope="row">5</th>
-                        <td>Giana Aminoff</td>
-                        <td>089217827382</td>
-                        <td>3891 Ranchview Dr. Richardson, California 62639</td>
-                        <td><div class="badge badge-success btn-aktif mb-3"><p class="text-aktif">Aktif</p></div></td>
-                        <td><button class="btn btn-outline-danger btn-detail" type="button"><a href="#" class="detail"><img src="./image/img/eye.png" alt=""> Lihat Detail</a></button></td>
+                        <td class="align-middle"><p class="mb-0">5</p></td>
+                        <td class="align-middle"><p class="mb-0">Giana Aminoff</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">3891 Ranchview Dr. Richardson, California 62639</p></td>
+                        <td class="align-middle"><div class="badge badge-success btn-aktif py-2 px-3 d-flex align-items-center justify-content-center"><p class="line-clamp-1 mb-0 text-aktif">Aktif</p></div></td>
+                        <td class="align-middle">
+                          <a href="./detailuser.html" class="btn btn-outline-danger py-2 px-3 d-flex align-items-center justify-content-center"><img src="./image/img/eye.png" class="me-3" alt="lihat-detail"> Lihat Detail</a>
+                        </td>
                       </tr>
                       <tr>
-                        <th scope="row">6</th>
-                        <td>Jaylon Workman</td>
-                        <td>089217827382</td>
-                        <td>3891 Ranchview Dr. Richardson, California 62639</td>
-                        <td><div class="badge badge-success btn-aktif mb-3"><p class="text-aktif">Aktif</p></div></td>
-                        <td><button class="btn btn-outline-danger btn-detail" type="button"><a href="#" class="detail"><img src="./image/img/eye.png" alt=""> Lihat Detail</a></button></td>
+                        <td class="align-middle"><p class="mb-0">6</p></td>
+                        <td class="align-middle"><p class="mb-0">Jaylon Workman</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">3891 Ranchview Dr. Richardson, California 62639</p></td>
+                        <td class="align-middle"><div class="badge badge-success btn-aktif py-2 px-3 d-flex align-items-center justify-content-center"><p class="line-clamp-1 mb-0 text-aktif">Aktif</p></div></td>
+                        <td class="align-middle">
+                          <a href="./detailuser.html" class="btn btn-outline-danger py-2 px-3 d-flex align-items-center justify-content-center"><img src="./image/img/eye.png" class="me-3" alt="lihat-detail"> Lihat Detail</a>
+                        </td>
                       </tr>
                       <tr>
-                        <th scope="row">7</th>
-                        <td>Lydia Donin</td>
-                        <td>089217827382</td>
-                        <td>3517 W. Gray St. Utica, Pennsylvania 57867</td>
-                        <td><div class="badge badge-success btn-aktif mb-3"><p class="text-aktif">Aktif</p></div></td>
-                        <td><button class="btn btn-outline-danger btn-detail" type="button"><a href="#" class="detail"><img src="./image/img/eye.png" alt=""> Lihat Detail</a></button></td>
+                        <td class="align-middle"><p class="mb-0">7</p></td>
+                        <td class="align-middle"><p class="mb-0">Lydia Donin</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">3517 W. Gray St. Utica, Pennsylvania 57867</p></td>
+                        <td class="align-middle"><div class="badge badge-success btn-aktif py-2 px-3 d-flex align-items-center justify-content-center"><p class="line-clamp-1 mb-0 text-aktif">Aktif</p></div></td>
+                        <td class="align-middle">
+                          <a href="./detailuser.html" class="btn btn-outline-danger py-2 px-3 d-flex align-items-center justify-content-center"><img src="./image/img/eye.png" class="me-3" alt="lihat-detail"> Lihat Detail</a>
+                        </td>
                       </tr>
                       <tr>
-                        <th scope="row">8</th>
-                        <td>Anika George</td>
-                        <td>089217827382</td>
-                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
-                        <td><div class="badge badge-success btn-aktif mb-3"><p class="text-aktif">Aktif</p></div></td>
-                        <td><button class="btn btn-outline-danger btn-detail" type="button"><a href="#" class="detail"><img src="./image/img/eye.png" alt=""> Lihat Detail</a></button></td>
+                        <td class="align-middle"><p class="mb-0">8</p></td>
+                        <td class="align-middle"><p class="mb-0">Anika George</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">3517 W. Gray St. Utica, Pennsylvania 57867</p></td>
+                        <td class="align-middle"><div class="badge badge-success btn-aktif py-2 px-3 d-flex align-items-center justify-content-center"><p class="line-clamp-1 mb-0 text-aktif">Aktif</p></div></td>
+                        <td class="align-middle">
+                          <a href="./detailuser.html" class="btn btn-outline-danger py-2 px-3 d-flex align-items-center justify-content-center"><img src="./image/img/eye.png" class="me-3" alt="lihat-detail"> Lihat Detail</a>
+                        </td>
                       </tr>
                       <tr>
-                        <th scope="row">9</th>
-                        <td>Makenna Schleifer</td>
-                        <td>089217827382</td>
-                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
-                        <td><div class="badge badge-danger btn-nonaktif mb-3"><p class="text-nonaktif">Tidak Aktif</p></div></td>
-                        <td><button class="btn btn-outline-danger btn-detail" type="button"><a href="#" class="detail"><img src="./image/img/eye.png" alt=""> Lihat Detail</a></button></td>
+                        <td class="align-middle"><p class="mb-0">9</p></td>
+                        <td class="align-middle"><p class="mb-0">Makenna Schleifer</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">2464 Royal Ln. Mesa, New Jersey 45463</p></td>
+                        <td class="align-middle"><div class="badge badge-success btn-aktif py-2 px-3 d-flex align-items-center justify-content-center"><p class="line-clamp-1 mb-0 text-nonaktif">Tidak Aktif</p></div></td>
+                        <td class="align-middle">
+                          <a href="./detailuser.html" class="btn btn-outline-danger py-2 px-3 d-flex align-items-center justify-content-center"><img src="./image/img/eye.png" class="me-3" alt="lihat-detail"> Lihat Detail</a>
+                        </td>
                       </tr>
                       <tr>
-                        <th scope="row">10</th>
-                        <td>Mira Donin</td>
-                        <td>089217827382</td>
-                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
-                        <td><div class="badge badge-danger btn-nonaktif mb-3"><p class="text-nonaktif">Tidak Aktif</p></div></td>
-                        <td><button class="btn btn-outline-danger btn-detail" type="button"><a href="#" class="detail"><img src="./image/img/eye.png" alt=""> Lihat Detail</a></button></td>
+                        <td class="align-middle"><p class="mb-0">10</p></td>
+                        <td class="align-middle"><p class="mb-0">Mira Donin</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">2464 Royal Ln. Mesa, New Jersey 45463</p></td>
+                        <td class="align-middle"><div class="badge badge-success btn-aktif py-2 px-3 d-flex align-items-center justify-content-center"><p class="line-clamp-1 mb-0 text-nonaktif">Tidak Aktif</p></div></td>
+                        <td class="align-middle">
+                          <a href="./detailuser.html" class="btn btn-outline-danger py-2 px-3 d-flex align-items-center justify-content-center"><img src="./image/img/eye.png" class="me-3" alt="lihat-detail"> Lihat Detail</a>
+                        </td>
                       </tr>
                     </tbody>
                   </table>

@@ -19,6 +19,14 @@
     transition: all ease-in-out 0.5s;
 }
 
+.subjudul{
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--second-color);
+    font-weight: 700;
+    margin-top: 20px;
+}
+
 .form-control, .form-select{
     border: 1px solid #E6E6E6;
     border-radius: 4px;
