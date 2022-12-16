@@ -1,0 +1,8 @@
+.btn-simpan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-simpan img{
+    margin-right: 12px;
+}

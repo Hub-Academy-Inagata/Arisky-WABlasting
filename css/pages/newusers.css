@@ -24,10 +24,6 @@
     min-height: 140px;
 }
 
-.btn-simpan{
-    margin-top: 30px;
-}
-
 .btn-logout{
     width: 150px;
 }
@@ -35,14 +31,6 @@
 .btn-logout a{
     text-decoration: none;
     color: var(--red-color);
-}
-
-.body .subjudul{
-    font-size: 20px;
-    line-height: 24px;
-    color: var(--second-color);
-    font-weight: 700;
-    margin-top: 20px;
 }
 
 h6{

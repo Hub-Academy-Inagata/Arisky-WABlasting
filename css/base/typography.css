@@ -10,6 +10,13 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+.subjudul{
+    font-size: 20px;
+    line-height: 24px;
+    color: #CF312D;
+    font-weight: 600;
+    margin-top: 20px;
+}
 @media(max-width: 576px){
     h4{
         font-size: 20px;

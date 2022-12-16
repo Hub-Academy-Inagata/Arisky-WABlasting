@@ -127,6 +127,7 @@
 }
 .form-control, .form-select, html:not([dir=rtl]) .form-select{
     border: 1px solid #E6E6E6;
+    background-color: #ffffff;
     border-radius: 4px;
     padding: 12px;
     font-weight: 400;

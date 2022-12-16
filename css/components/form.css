@@ -42,3 +42,10 @@ input[type=number] {
 .form-search{
     gap: 12px;
 }
+.form-search .btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
