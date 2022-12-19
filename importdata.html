@@ -15,6 +15,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
 
   <!-- ./vendor/coreui/vendors styles-->
   <link rel="stylesheet" href="./vendor/coreui/vendors/simplebar/css/simplebar.css">
@@ -109,7 +112,7 @@
                             Pilih File
                         </label>
                     </div>
-                    <p><small>Import data menggunakan Excel<span class="fw-700">(.xls, .xlsx)</span> maksimal ukuran
+                    <p><small>Import data menggunakan Excel<span class="fw-700"> (.xls, .xlsx)</span> maksimal ukuran
                     <span class="fw-700">10MB.</span></small></p>
                 </div>
                 <div class="d-grid pt-2">
@@ -123,10 +126,57 @@
       <div>Made with ❤️ <span class="text-danger">ChatBlaster</span></div>
     </footer>
   </div>
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
   <!-- CoreUI and necessary plugins-->
   <script src="./vendor/coreui/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
   <script src="./vendor/coreui/vendors/simplebar/js/simplebar.min.js"></script>
   <script>
+      /* Bootstrap 5 JS included */
+      /* vanillajs-datepicker 1.1.4 JS included */
+
+      const getDatePickerTitle = elem => {
+          // From the label or the aria-label
+          const label = elem.nextElementSibling;
+          let titleText = '';
+          if (label && label.tagName === 'LABEL') {
+              titleText = label.textContent;
+          } else {
+              titleText = elem.getAttribute('aria-label') || '';
+          }
+          return titleText;
+      }
+
+      const elems = document.querySelectorAll('.datepicker_input');
+      for (const elem of elems) {
+          const datepicker = new Datepicker(elem, {
+              'format': 'dd/mm/yyyy', // UK format
+              title: getDatePickerTitle(elem)
+          });
+      }
+
+      //handle on change input file
+      function onchange_value(name, preview) {
+          files = $(`#${name}`).prop('files');
+          var filesArr = Array.prototype.slice.call(files);
+
+          if (filesArr[0].size > 5242880) {
+              alert(`File ${filesArr[0].name} terlalu besar!`);
+              $(`#${name}`).val('');
+              $(`#${preview}`).removeClass('active');
+              $(`#${preview} label.label-upload-file`).html(`<img src="./image/icon/upload.svg" class="card-icon" alt="">Pilih File`);
+          } else {
+              $(`#${preview}`).addClass('active');
+              $(`#${preview} label.label-upload-file`).html(`<img src="./image/icon/upload.svg" class="card-icon" alt="">${filesArr[0].name}`);
+              console.log(filesArr[0].name, 'name'); //for testing in console
+          }
+
+      }
+
   </script>
 
 </body>
