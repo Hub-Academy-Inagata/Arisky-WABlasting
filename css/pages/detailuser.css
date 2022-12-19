@@ -5,6 +5,12 @@
     --second-color: #CF312D;
 }
 
+.badge-primary{
+    color: #A22623 !important;
+    border: 1px solid #F5F7FA !important;
+    background: #F7EDED !important;
+}
+
 *{
     font-family: 'Lato', sans-serif;
     text-transform: capitalize;

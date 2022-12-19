@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+  <title>ABCenter</title>
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="./vendor/coreui/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Font Family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- ./vendor/coreui/vendors styles-->
+  <link rel="stylesheet" href="./vendor/coreui/vendors/simplebar/css/simplebar.css">
+  <link rel="stylesheet" href="./vendor/coreui/css/vendors/simplebar.css">
+
+  <!-- Main styles for this application-->
+  <link href="./vendor/coreui/css/style.css" rel="stylesheet">
+
+  <!-- Custom CSS-->
+  <!-- Stylesheet -->
+  <link href="./css/stylesheet.css" rel="stylesheet">
+  <!-- CSS Base -->
+  <link href="./css/base/typography.css" rel="stylesheet">
+  <!-- CSS Component -->
+  <link href="./css/components/form.css" rel="stylesheet">
+  <link href="./css/components/table.css" rel="stylesheet">
+  <!-- CSS Layout -->
+  <link href="./css/layout/header.css" rel="stylesheet">
+  <link href="./css/layout/sidebar.css" rel="stylesheet">
+  <link href="./css/layout/body.css" rel="stylesheet">
+  <link href="./css/layout/footer.css" rel="stylesheet">
+  <!-- CSS Pages -->
+  <link href="./css/pages/exportdata.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
+    <div class="sidebar-brand d-flex d-md-flex">
+      <img src="./image/logo.svg" class="sidebar-brand d-flex d-md-flex" alt="">
+      <!-- <svg class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
+          <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#full"></use>
+        </svg> -->
+      <img src="./image/logo.svg" class="sidebar-brand-narrow bg-primary" alt="">
+      <!-- <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
+          <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#signet"></use>
+        </svg> -->
+    </div>
+    <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+      <li class="nav-item"><a class="nav-link" href="./index.html">
+          <svg class="nav-icon">
+            <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
+          </svg> Beranda</a></li>
+      <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <svg class="nav-icon">
+            <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+          </svg> Anggota</a>
+        <ul class="nav-group-items">
+          <li class="nav-item"><a class="nav-link" href="./users.html"><span class="nav-icon"></span> Master Level</a></li>
+          <li class="nav-item"><a class="nav-link" href="./importdata.html"><span class="nav-icon"></span> Import
+              Data</a></li>
+          <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span> Export
+              Data</a></li>
+          <li class="nav-item"><a class="nav-link" href="./program.html"><span class="nav-icon"></span>
+              Program</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="./monitoring.html">
+          <svg class="nav-icon">
+            <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
+          </svg> Monitoring</a></li>
+    </ul>
+    <ul class="d-flex justify-content-center p-0">
+        <button class="btn badge-danger btn-logout">
+            <a href="#" class="logout"><img src="./image/img/logout.png" alt=""> Logout</a>
+        </button>
+    </ul>
+  </div>
+  <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+    <header class="header bg-white border-0 px-3 py-2 d-lg-none">
+      <div class="container-fluid flex-column align-items-start">
+        <button class="header-toggler p-0 d-lg-none" type="button"
+          onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+          <svg class="icon icon-lg">
+            <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <div class="body flex-grow-1 px-3 mt-4 mt-lg-5">
+      <div class="container-lg">
+        <h4 class="fw-600 mb-4">Export Data Anggota</h4>
+          <div class="d-flex mb-3 mb-md-4 pt-3">
+              <h5 class="fw-700">Total 25 data anggota yang dapat diexport</h5>
+          </div>
+          <div class="col-12 mb-4">
+            <div class="d-grid btn-export">
+                <button class="btn btn-primary" type="button"><img src="./image/img/trash.png" alt=""> Export Data</button>
+            </div>
+          </div>
+          <div class="card card-main">
+            <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th class="text-secondary fw-600" style="width: 5%;" scope="col">No</th>
+                        <th class="text-secondary fw-600" style="width: 30%;" scope="col">Nama Anggota</th>
+                        <th class="text-secondary fw-600" style="width: 12%;" scope="col">No. Telp</th>
+                        <th class="text-secondary fw-600" style="width: 35%;" scope="col">Alamat</th>
+                        <th class="text-secondary fw-600 " style="width: 13%;" scope="col">Kode Referral</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="align-middle"><p class="mb-0">1</p></td>
+                        <td class="align-middle"><p class="mb-0">Jakob Ekstrom Bothman</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">2972 Westheimer Rd. Santa Ana, Illinois 85486</p></td>
+                        <td class="align-middle"><p class="mb-0">ERH-2897</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align-middle"><p class="mb-0">2</p></td>
+                        <td class="align-middle"><p class="mb-0">Zain Stanton</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">2972 Westheimer Rd. Santa Ana, Illinois 85486</p></td>
+                        <td class="align-middle"><p class="mb-0">D-610</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align-middle"><p class="mb-0">3</p></td>
+                        <td class="align-middle"><p class="mb-0">Jaylon Gouse</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">2715 Ash Dr. San Jose, South Dakota 83475</p></td>
+                        <td class="align-middle"><p class="mb-0">KFK-0683</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align-middle"><p class="mb-0">4</p></td>
+                        <td class="align-middle"><p class="mb-0">Justin Aminoff</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">2118 Thornridge Cir. Syracuse, Connecticut 35624</p></td>
+                        <td class="align-middle"><p class="mb-0">ERH-2897</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align-middle"><p class="mb-0">5</p></td>
+                        <td class="align-middle"><p class="mb-0">Giana Aminoff</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">3891 Ranchview Dr. Richardson, California 62639</p></td>
+                        <td class="align-middle"><p class="mb-0">BUMY-2044</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align-middle"><p class="mb-0">6</p></td>
+                        <td class="align-middle"><p class="mb-0">Jaylon Workman</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">3891 Ranchview Dr. Richardson, California 62639</p></td>
+                        <td class="align-middle"><p class="mb-0">LTCF-855</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align-middle"><p class="mb-0">7</p></td>
+                        <td class="align-middle"><p class="mb-0">Lydia Donin</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">3517 W. Gray St. Utica, Pennsylvania 57867</p></td>
+                        <td class="align-middle"><p class="mb-0">C-9450</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align-middle"><p class="mb-0">8</p></td>
+                        <td class="align-middle"><p class="mb-0">Anika George</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">3517 W. Gray St. Utica, Pennsylvania 57867</p></td>
+                        <td class="align-middle"><p class="mb-0">A-2316</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align-middle"><p class="mb-0">9</p></td>
+                        <td class="align-middle"><p class="mb-0">Makenna Schleifer</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">2464 Royal Ln. Mesa, New Jersey 45463</p></td>
+                        <td class="align-middle"><p class="mb-0">A-2316</p></td>
+                      </tr>
+                      <tr>
+                        <td class="align-middle"><p class="mb-0">10</p></td>
+                        <td class="align-middle"><p class="mb-0">Mira Donin</p></td>
+                        <td class="align-middle"><p class="mb-0">089217827382</p></td>
+                        <td class="align-middle"><p class="line-clamp-1 mb-0">2464 Royal Ln. Mesa, New Jersey 45463</p></td>
+                        <td class="align-middle"><p class="mb-0">A-2316</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <footer class="footer bg-white border-0">
+      <div>Made with ❤️ <span class="text-danger">ChatBlaster</span></div>
+    </footer>
+  </div>
+  <!-- CoreUI and necessary plugins-->
+  <script src="./vendor/coreui/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+  <script src="./vendor/coreui/vendors/simplebar/js/simplebar.min.js"></script>
+  <script>
+  </script>
+
+</body>
+
+</html>

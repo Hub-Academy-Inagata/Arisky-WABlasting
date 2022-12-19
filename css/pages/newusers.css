@@ -40,8 +40,12 @@ h6{
     color: var(--second-color);
 }
 
+.btn-modal:hover{
+    color: #fff;
+}
+
 .btn-modal{
-    width: 40%;
+    width: 45%;
 }
 
 /* modal */
