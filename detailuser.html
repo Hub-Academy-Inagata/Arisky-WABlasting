@@ -11,8 +11,12 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- ./vendor/coreui/vendors styles-->
     <link rel="stylesheet" href="./vendor/coreui/vendors/simplebar/css/simplebar.css">
@@ -22,67 +26,80 @@
     <link href="./vendor/coreui/css/style.css" rel="stylesheet">
 
     <!-- Custom CSS-->
+    <!-- Stylesheet -->
     <link href="./css/stylesheet.css" rel="stylesheet">
+    <!-- CSS Base -->
+    <link href="./css/base/typography.css" rel="stylesheet">
+    <!-- CSS Component -->
+    <link href="./css/components/form.css" rel="stylesheet">
+    <link href="./css/components/table.css" rel="stylesheet">
+    <!-- CSS Layout -->
+    <link href="./css/layout/header.css" rel="stylesheet">
     <link href="./css/layout/sidebar.css" rel="stylesheet">
     <link href="./css/layout/body.css" rel="stylesheet">
     <link href="./css/layout/footer.css" rel="stylesheet">
-    <link href="./css/components/form.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/pages/detailuser.css">  
+    <!-- CSS Pages -->
+    <link rel="stylesheet" href="./css/pages/detailuser.css">
+     
+    <!-- Vanilla Datepicker CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css'>  
 
 
   </head>
   <body>
-    <div class="sidebar sidebar-dark bg-primary sidebar-fixed" id="sidebar">
-      <div class="sidebar-brand bg-primary d-flex d-md-flex">
-        <img src="./image/logo.svg" class="sidebar-brand bg-primary d-flex d-md-flex" alt="">
+    <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
+      <div class="sidebar-brand d-flex d-md-flex">
+        <img src="./image/logo.svg" class="sidebar-brand d-flex d-md-flex" alt="">
         <!-- <svg class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
-          <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#full"></use>
-        </svg> -->
+            <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#full"></use>
+          </svg> -->
         <img src="./image/logo.svg" class="sidebar-brand-narrow bg-primary" alt="">
         <!-- <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
-          <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#signet"></use>
-        </svg> -->
+            <use xlink:href="./vendor/coreui/assets/brand/coreui.svg#signet"></use>
+          </svg> -->
       </div>
       <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
-        <li class="nav-item"><a class="nav-link" href="index.html">
+        <li class="nav-item"><a class="nav-link" href="./index.html">
             <svg class="nav-icon">
-              <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-home"></use>
+              <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
             </svg> Beranda</a></li>
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
-                <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-people"></use>
+              <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
             </svg> Anggota</a>
-            <ul class="nav-group-items">
-                <li class="nav-item"><a class="nav-link" href="./users.html"><span class="nav-icon"></span> Master Level</a></li>
-                <li class="nav-item"><a class="nav-link" href="./importdata.html"><span class="nav-icon"></span> Import Data</a></li>
-                <li class="nav-item"><a class="nav-link" href="./exportdata.html"><span class="nav-icon"></span> Export Data</a></li>
-                <li class="nav-item"><a class="nav-link" href="./program.html"><span class="nav-icon"></span> Program</a></li>
-            </ul>
+          <ul class="nav-group-items">
+            <li class="nav-item"><a class="nav-link" href="./users.html"><span class="nav-icon"></span> Master Level</a></li>
+            <li class="nav-item"><a class="nav-link" href="./importdata.html"><span class="nav-icon"></span> Import
+                Data</a></li>
+            <li class="nav-item"><a class="nav-link" href="./exportdata.html"><span class="nav-icon"></span> Export
+                Data</a></li>
+            <li class="nav-item"><a class="nav-link" href="./program.html"><span class="nav-icon"></span>
+                Program</a></li>
+          </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="colors.html">
+        <li class="nav-item"><a class="nav-link" href="./monitoring.html">
             <svg class="nav-icon">
               <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
-            </svg> Monitoring</a>
-        </li>
+            </svg> Monitoring</a></li>
       </ul>
       <ul class="d-flex justify-content-center p-0">
-            <button class="btn badge-danger btn-logout">
-                <a href="./users.html" class="logout"><img src="./image/img/logout.png" alt=""> Logout</a>
-            </button>
-        </ul>
+          <button class="btn badge-danger btn-logout">
+              <a href="#" class="logout"><img src="./image/img/logout.png" alt=""> Logout</a>
+          </button>
+      </ul>
     </div>
     <div class="wrapper d-flex flex-column min-vh-100 bg-light">
-        <header class="header bg-white border-0 px-3 py-2 d-lg-none">
-            <div class="container-fluid flex-column align-items-start">
-                <button class="header-toggler p-0 d-lg-none" type="button"
-                    onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
-                    <svg class="icon icon-lg">
-                        <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
-                    </svg>
-                </button>
-            </div>
-        </header>
-        <div class="body flex-grow-1 px-3 mt-4 mt-lg-5">
+      <header class="header bg-white border-0 px-3 py-2 d-lg-none">
+          <div class="container-fluid flex-column align-items-start">
+              <button class="header-toggler p-0 d-lg-none" type="button"
+                  onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+                  <svg class="icon icon-lg">
+                      <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+                  </svg>
+              </button>
+          </div>
+      </header>
+      <div class="body flex-grow-1 px-3 mt-4 mt-lg-5">
         <div class="container-lg">
             <h4 class="fw-600 mb-0">Tambah Data Anggota</h4>
             <div class="row g-3">
@@ -286,13 +303,19 @@
             </div>
         </div>
       </div>
-      <footer class="footer bg-transparent border-0">
+      <footer class="footer bg-white border-0">
         <div>Made with ❤️ <span class="text-danger">ChatBlaster</span></div>
       </footer>
     </div>
+    
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
     <!-- CoreUI and necessary plugins-->
     <script src="./vendor/coreui/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
     <script src="./vendor/coreui/vendors/simplebar/js/simplebar.min.js"></script>
+    <!-- Vanilla Datepicker JS -->
+    <script src='https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js'></script>
     <script src="./js/pages/detailuser.js"></script>
 
   </body>
