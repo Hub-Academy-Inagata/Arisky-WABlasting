@@ -1,0 +1,44 @@
+
+
+.wrappers{
+    background: #601715;
+    background-image: url(./../../image/img/dash1.png), url(./../../image/img/dash2.png);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.container-lg{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.card{
+    width: 24rem;
+    height: 20rem;
+}
+
+h3{
+    color: #212122;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+h6{
+    font-size: 16px;
+    line-height: 24px;
+    color: #ED7875;
+    font-weight: 400;
+}
+
+.btn-primary{
+    color: rgba(228, 55, 49, 0.1), rgb(205, 151, 151), rgb(205, 151, 151);
+    margin-top: 30px;
+    width: 22rem !important;
+    height: 36px;
+    padding: 6px !important;
+}

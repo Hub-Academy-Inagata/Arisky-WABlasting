@@ -20,6 +20,33 @@
 .dashboard .card-stats .indicator.indicator-success {
     background: #3dc98e;
 }
+h3{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+}
+.time{
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F2F4;
+    border-radius: 12px;
+    height: 48px;
+    padding-top: 8px;
+}
+h6{
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+    font-weight: 600;
+}
+h6:hover{
+    border: none;
+    background-color: #E43631;
+    border-radius: 10px;
+    height: 48px;
+    color: #fff;
+    padding-top: 14px;
+}
 @media(max-width: 576px){
     .dashboard .card-stats .card-body{
         padding: 16px 24px;
