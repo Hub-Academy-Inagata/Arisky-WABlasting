@@ -39,7 +39,7 @@
     <link href="./css/layout/body.css" rel="stylesheet">
     <link href="./css/layout/footer.css" rel="stylesheet">
     <!-- CSS Pages -->
-    <link rel="stylesheet" href="./css/pages/detailuser.css">
+    <link rel="stylesheet" href="./css/pages/ubahdata.css">
      
     <!-- Vanilla Datepicker CSS -->
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css'>  
@@ -101,21 +101,21 @@
       </header>
       <div class="body flex-grow-1 px-3 mt-4 mt-lg-5">
         <div class="container-lg">
-            <h4 class="fw-600 mb-0">Tambah Data Anggota</h4>
+            <h4 class="fw-600 mb-0 mb-4">Ubah Data Anggota</h4>
             <div class="row g-3">
                 <div class="col-sm-6">
                     <div class="mb-3">
                         <h2 class="subjudul text-danger">data diri</h2>
                         <label for="test-input" class="form-label fw-700">NIK</label>
-                        <input type="text" id="test-input" class="form-control" value="39271837261726" readonly>
+                        <input type="text" id="test-input" class="form-control" value="39271837261726" >
                     </div>
                     <div class="mb-3">
                         <label for="test-input" class="form-label fw-700">nama lengkap</label><span class="text-danger fw-700"> *</span>
-                        <input type="text" id="test-input" class="form-control" value="Nolan Philips" readonly>
+                        <input type="text" id="test-input" class="form-control" value="Nolan Philips" >
                     </div>
                     <label for="test-input" class="form-label fw-700">tanggal lahir</label>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" value="20/01/1994" readonly>
+                        <input type="text" class="datepicker_input form-control" value="20/01/1994" >
                         <span class="input-group-text">
                             <svg class="icon icon-lg">
                                 <use xlink:href="./vendor/coreui/vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
@@ -124,7 +124,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="test-select" class="form-label fw-700">pekerjaan</label>
-                        <select id="test-select" class="form-select" disabled>
+                        <select id="test-select" class="form-select" >
                             <option selected>Karyawan Swasta</option>
                             <option value="1">Belum/Tidak bekerja</option>
                             <option value="2">Mengurus Rumah Tangga</option>
@@ -141,11 +141,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="test-input" class="form-label fw-700">no. HP</label><span class="text-danger fw-700"> *</span>
-                        <input type="text" id="test-input" class="form-control" value="+6289827281611" readonly>
+                        <input type="text" id="test-input" class="form-control" value="+6289827281611" >
                     </div>
                     <div class="mb-3">
                         <label for="test-select" class="form-label fw-700">level anggota</label>
-                        <select id="test-select" class="form-select" disabled>
+                        <select id="test-select" class="form-select" >
                             <option selected>Koordinator</option>
                             <option value="1">Ketua</option>
                             <option value="2">Wakil Ketua</option>
@@ -162,11 +162,11 @@
                     <div class="mb-3">
                         <h2 class="subjudul text-danger">wilayah</h2>
                         <label for="test-textarea" class="form-label fw-700">alamat</label><span class="text-danger fw-700"> *</span>
-                        <textarea id="test-textarea" class="form-control" cols="30" rows="5" placeholder="" readonly>Jl. Martadiredja III No. 57 ...</textarea>
+                        <textarea id="test-textarea" class="form-control" cols="30" rows="5" placeholder="" >Jl. Martadiredja III No. 57 ...</textarea>
                     </div>
                     <div class="mb-3">
                         <label for="test-select" class="form-label fw-700">Provinsi</label>
-                        <select id="test-select" class="form-select" disabled>
+                        <select id="test-select" class="form-select" >
                             <option selected>Jawa Timur</option>
                             <option value="1">Nanggroe Aceh Darussalam</option>
                             <option value="2">Sumatera Utara</option>
@@ -210,7 +210,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="test-select" class="form-label fw-700">Kota/Kabupaten</label>
-                        <select id="test-select" class="form-select" disabled>
+                        <select id="test-select" class="form-select" >
                             <option selected>Kota Malang</option>
                             <option value="1">Kabupaten Bangkalan</option>
                             <option value="2">Kabupaten Banyuwangi</option>
@@ -254,7 +254,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="test-select" class="form-label fw-700">Kecamatan</label>
-                        <select id="test-select" class="form-select" disabled>
+                        <select id="test-select" class="form-select" >
                             <option selected>Kecamatan Klojen</option>
                             <option value="1">Kecamatan Klojen</option>
                             <option value="2">Kecamatan Blimbing</option>
@@ -265,7 +265,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="test-select" class="form-label fw-700">Desa/Kelurahan</label>
-                        <select id="test-select" class="form-select" disabled>
+                        <select id="test-select" class="form-select" >
                             <option selected>Kelurahan Kasin</option>
                             <option value="1">Kelurahan Kasin</option>
                             <option value="2">Kelurahan Blimbing</option>
@@ -289,14 +289,14 @@
                 <div class="col-sm-6">
                     <div class="mb-3">
                         <div class="d-grid">
-                            <a href="./ubahdata.html" class="btn badge-primary"><img src="./image/img/edit.png" class="me-1" alt="ubah-data"> Ubah Data</a>
+                            <button class="btn badge-primary" type="button">Batal</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="mb-3">
                         <div class="d-grid">
-                            <button class="btn btn-danger" type="button"><img src="./image/img/trash.png" class="me-1" alt="hapus-data"> Hapus</button>
+                            <button class="btn btn-success" type="button"><img src="./image/img/tick-circle.png" alt=""> Simpan Data</button>
                         </div>
                     </div>
                 </div>
@@ -316,7 +316,32 @@
     <script src="./vendor/coreui/vendors/simplebar/js/simplebar.min.js"></script>
     <!-- Vanilla Datepicker JS -->
     <script src='https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js'></script>
-    <script src="./js/pages/detailuser.js"></script>
+    <script src="./js/pages/ubahdata.js"></script>
+
+    <script>
+      /* Bootstrap 5 JS included */
+      /* vanillajs-datepicker 1.1.4 JS included */
+
+      const getDatePickerTitle = elem => {
+          // From the label or the aria-label
+          const label = elem.nextElementSibling;
+          let titleText = '';
+          if (label && label.tagName === 'LABEL') {
+              titleText = label.textContent;
+          } else {
+              titleText = elem.getAttribute('aria-label') || '';
+          }
+          return titleText;
+      }
+
+      const elems = document.querySelectorAll('.datepicker_input');
+      for (const elem of elems) {
+          const datepicker = new Datepicker(elem, {
+              'format': 'dd/mm/yyyy', // UK format
+              title: getDatePickerTitle(elem)
+          });
+      }
+    </script>
 
   </body>
 </html>
