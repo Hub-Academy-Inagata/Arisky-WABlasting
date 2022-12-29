@@ -2,6 +2,9 @@
     box-shadow: 0px 2px 10px rgba(25, 42, 62, 0.08);
     border-radius: 12px;
 }
+.dashboard .data-chart{
+    flex-direction: row;
+}
 .dashboard .card-stats .card-body{
     padding: 20px 32px;
 }
@@ -31,24 +34,28 @@ h3{
     background-color: #F0F2F4;
     border-radius: 12px;
     height: 48px;
-    padding-top: 8px;
 }
-h6{
-    font-size: 14px;
-    line-height: 20px;
-    padding: 10px;
-    font-weight: 600;
-}
-h6:hover{
-    border: none;
+.nav-link:hover{
     background-color: #E43631;
+    color: #fff !important;
     border-radius: 10px;
-    height: 48px;
+}
+.nav-pills .nav-link.active{
+    background-color: #E43631;
     color: #fff;
-    padding-top: 14px;
+    border-radius: 10px;
+}
+.tab-content .tab-pane .doughnut{
+    width: 300px;
 }
 @media(max-width: 576px){
+    .dashboard .data-chart{
+        flex-direction: column;
+    }
     .dashboard .card-stats .card-body{
         padding: 16px 24px;
+    }
+    .dashboard .pesan{
+        flex-direction: column;
     }
 }

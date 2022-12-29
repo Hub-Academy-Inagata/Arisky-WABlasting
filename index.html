@@ -79,7 +79,7 @@
     </ul>
     <ul class="d-flex justify-content-center p-0">
         <button class="btn badge-danger btn-logout">
-            <a href="#" class="logout"><img src="./image/img/logout.png" alt=""> Logout</a>
+            <a href="./login.html" class="logout"><img src="./image/img/logout.png" alt=""> Logout</a>
         </button>
     </ul>
   </div>
@@ -120,27 +120,30 @@
             </div>
           </div>
         </div>
-        <div class="card card-main col-12 flex-row">
+        <div class="card card-main col-12 data-chart">
           <div class="card-left col-md-7">
             <div class="card-header border-0 bg-white d-flex align-items-center justify-content-between pt-3 px-3 pb-0">
-              <h5 class="fw-700 text-secondary mb-0">Monitoring Status</h5>
+              <h5 class="fw-700 mb-0">Monitoring Status</h5>
             </div>
-            <div class="penerima pt-3 px-3 row justify-content-end">
-              <div class="col-4">
-                <h3>Total Penerima Terbanyak</h3>
-                <h4><span class="text-danger">175</span> Anggota</h4>
+            <div class="penerima pt-4 px-3 row justify-content-end">
+              <div class="col-sm-6">
+                <h3 class="text-black fw-600">Total Penerima Terbanyak</h3>
+                <h4 class="text-black fw-700"><span class="text-danger fw-700">175</span> Anggota</h4>
               </div>
-              <div class="col-4">
-                  
-              </div>
-              <div class="time col-4 d-flex">
-                  <h6>Mingguan</h6>
-                  <h6>Bulanan</h6>
+              <div class="time col-sm-6 d-flex">
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-600" href="#">Mingguan</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active fw-600" aria-current="page" href="#">Bulanan</a>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="tab-content rounded-bottom">
               <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-691">
-                <div class="c-chart-wrapper">
+                <div class="chart-wrapper">
                   <canvas id="canvas-1"></canvas>
                 </div>
               </div>
@@ -148,9 +151,13 @@
           </div>
           <div class="card-right col-md-5">
             <div class="top">
+              <div class="data-penerima text-center pt-4">
+                <h3 class="text-black fw-600">Data Penerima Blasting</h3>
+                <h4 class="text-danger fw-700"> Desember</h4>
+              </div>
               <div class="tab-content rounded-bottom">
                 <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-974">
-                  <div class="c-chart-wrapper">
+                  <div class="chart-wrapper doughnut">
                     <canvas id="canvas-3"></canvas>
                   </div>
                 </div>

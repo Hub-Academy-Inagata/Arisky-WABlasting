@@ -38,7 +38,13 @@ h6{
 .btn-primary{
     color: rgba(228, 55, 49, 0.1), rgb(205, 151, 151), rgb(205, 151, 151);
     margin-top: 30px;
-    width: 22rem !important;
     height: 36px;
     padding: 6px !important;
+}
+
+@media(max-width: 576px){
+    .card{
+        width: 16rem;
+        height: 22rem;
+    }
 }
