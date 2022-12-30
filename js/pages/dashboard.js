@@ -8,7 +8,7 @@
  */
 
 // random Numbers
-const random = () => Math.round(Math.random() * 100);
+const random = () => Math.round(Math.random() * 200);
 
 // eslint-disable-next-line no-unused-vars
 const lineChart = new Chart(document.getElementById('canvas-1'), {
@@ -35,7 +35,7 @@ const doughnutChart = new Chart(document.getElementById('canvas-3'), {
     data: {
       labels: ['Terkirim', 'Tidak Terkirim'],
       datasets: [{
-        data: [110, 40],
+        data: [150, 25],
         backgroundColor: ['#5CB85C', '#EC3832'],
         hoverBackgroundColor: ['#5CB85C', '#EC3832']
       }]

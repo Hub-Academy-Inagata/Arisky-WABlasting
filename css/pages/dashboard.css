@@ -24,9 +24,13 @@
     background: #3dc98e;
 }
 h3{
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 16px;
     font-weight: 600;
+}
+h4{
+    font-size: 20px;
+    line-height: 24px;
 }
 .time{
     justify-content: center;
@@ -34,19 +38,23 @@ h3{
     background-color: #F0F2F4;
     border-radius: 12px;
     height: 48px;
+    padding: 8px;
 }
-.nav-link:hover{
+.nav-link{
+    padding: 5px;
+}
+.nav-item .nav-link:hover{
     background-color: #E43631;
     color: #fff !important;
-    border-radius: 10px;
+    border-radius: 8px;
+    height: 32px;
+    padding: auto 16px;
 }
-.nav-pills .nav-link.active{
-    background-color: #E43631;
-    color: #fff;
-    border-radius: 10px;
-}
+/* #canvas-1{
+    height: 500px !important;
+} */
 .tab-content .tab-pane .doughnut{
-    width: 300px;
+    width: 200px;
 }
 @media(max-width: 576px){
     .dashboard .data-chart{
