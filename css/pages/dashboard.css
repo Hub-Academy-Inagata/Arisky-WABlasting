@@ -23,16 +23,16 @@
 .dashboard .card-stats .indicator.indicator-success {
     background: #3dc98e;
 }
-h3{
+.dashboard h3{
     font-size: 12px;
     line-height: 16px;
     font-weight: 600;
 }
-h4{
+.dashboard h4{
     font-size: 20px;
     line-height: 24px;
 }
-.time{
+.dashboard .time{
     justify-content: center;
     align-items: center;
     background-color: #F0F2F4;
@@ -40,21 +40,41 @@ h4{
     height: 48px;
     padding: 8px;
 }
-.nav-link{
-    padding: 5px;
+
+.dashboard .nav-pills{
+    gap: 12px;
 }
-.nav-item .nav-link:hover{
-    background-color: #E43631;
-    color: #fff !important;
+.dashboard .nav-pills .nav-link{
     border-radius: 8px;
     height: 32px;
     padding: auto 16px;
+    color: #000000;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
 }
-/* #canvas-1{
-    height: 500px !important;
-} */
-.tab-content .tab-pane .doughnut{
-    width: 200px;
+.dashboard .nav-pills .nav-link:hover{
+    background-color: #E43631;
+    color: #fff !important;
+}
+.dashboard .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background: #E43631;
+    color: #fff !important;
+    border-radius: 8px;
+}
+.dashboard .card-left{
+    border-right: 1px solid #E6E6E6;
+}
+.dashboard .penerima{
+    margin-bottom: 32px;
+}
+.dashboard .data-penerima{
+    margin-bottom: 32px;
+}
+@media(max-width: 768px){
+    .dashboard .card-left{
+        border-right: none;
+    }
 }
 @media(max-width: 576px){
     .dashboard .data-chart{
