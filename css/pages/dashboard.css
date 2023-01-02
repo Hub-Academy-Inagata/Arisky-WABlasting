@@ -23,12 +23,12 @@
 .dashboard .card-stats .indicator.indicator-success {
     background: #3dc98e;
 }
-.dashboard h3{
+.dashboard .card-main h3{
     font-size: 12px;
     line-height: 16px;
     font-weight: 600;
 }
-.dashboard h4{
+.dashboard .card-main h4{
     font-size: 20px;
     line-height: 24px;
 }
